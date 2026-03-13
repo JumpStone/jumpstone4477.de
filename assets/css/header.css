@@ -1,196 +1,196 @@
 /* --- HEADER STYLES --- */
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 *:focus {
-  outline: none;
+    outline: none;
 }
 
 /* --- HEADER --- */
 .header-nav {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  max-width: 1200px;
-  padding: 15px 0;
-  z-index: 100;
-  background-color: rgba(5, 5, 5, 0.8);
-  backdrop-filter: blur(5px);
-  border: 1px solid var(--border-color);
-  border-radius: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    padding: 15px 0;
+    z-index: 100;
+    background-color: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
 /* Header shrink effect for mobile */
 .header-nav.header-shrink {
-  top: 5px;
-  width: 95%;
-  padding: 8px 0;
-  border-radius: 15px;
-  backdrop-filter: blur(2px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    top: 5px;
+    width: 95%;
+    padding: 8px 0;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-mono);
-  font-weight: 700;
-  font-size: 1.2rem;
-  text-decoration: none;
-  color: var(--text-main);
-  transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: all 0.3s ease;
 }
 
 /* Shrink logo on header shrink */
 .header-nav.header-shrink .logo {
-  gap: 8px;
-  font-size: 1rem;
+    gap: 8px;
+    font-size: 1rem;
 }
 
 .logo-img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
 }
 
 /* Shrink logo image on header shrink */
 .header-nav.header-shrink .logo-img {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 .nav-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: all 0.3s ease;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
 }
 
 /* Hide nav links on header shrink */
 .header-nav.header-shrink .nav-links {
-  gap: 0.5rem;
-  opacity: 1;
+    gap: 0.5rem;
+    opacity: 1;
 }
 
 .social-card {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
-  transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    transition: all 0.3s ease;
 }
 
 /* Reduce social card gap on header shrink */
 .header-nav.header-shrink .social-card {
-  gap: 0.3rem;
+    gap: 0.3rem;
 }
 
 /* Navigation link styles */
 .nav-links a {
-  color: var(--text-muted);
-  text-decoration: none;
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  transition: color var(--transition-speed);
-  position: relative;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    transition: color var(--transition-speed);
+    position: relative;
 }
 
 .nav-links a:hover {
-  color: var(--accent-primary);
+    color: var(--accent-primary);
 }
 
 .nav-links a::after {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--accent-primary);
-  transition: width var(--transition-speed);
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-primary);
+    transition: width var(--transition-speed);
 }
 
 .nav-links a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
 /* --- RESPONSIVE DESIGN --- */
 @media (max-width: 768px) {
-  /* Adjust header height for mobile to prevent overlap */
-  :root {
-    --header-height: 180px; /* Increased to accommodate stacked mobile header */
-  }
+    /* Adjust header height for mobile to prevent overlap */
+    :root {
+        --header-height: 180px; /* Increased to accommodate stacked mobile header */
+    }
 
-  /* Mobile header adjustments */
-  .header-nav {
-    top: 10px;
-    width: 95%;
-    border-radius: 20px;
-    padding: 10px 0;
-  }
+    /* Mobile header adjustments */
+    .header-nav {
+        top: 10px;
+        width: 95%;
+        border-radius: 20px;
+        padding: 10px 0;
+    }
 
-  /* Mobile header shrink effect */
-  .header-nav.header-shrink {
-    top: 5px;
-    padding: 5px 0;
-    border-radius: 12px;
-    backdrop-filter: blur(1px);
-  }
+    /* Mobile header shrink effect */
+    .header-nav.header-shrink {
+        top: 5px;
+        padding: 5px 0;
+        border-radius: 12px;
+        backdrop-filter: blur(1px);
+    }
 
-  .header-content {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 15px;
-  }
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 15px;
+    }
 
-  /* Hide navigation links and social icons when header is shrunk on mobile */
-  .header-nav.header-shrink .nav-links,
-  .header-nav.header-shrink .social-card {
-    display: none;
-  }
+    /* Hide navigation links and social icons when header is shrunk on mobile */
+    .header-nav.header-shrink .nav-links,
+    .header-nav.header-shrink .social-card {
+        display: none;
+    }
 
-  /* Center logo when header is shrunk */
-  .header-nav.header-shrink .header-content {
-    flex-direction: row;
-    justify-content: center;
-    padding: 0;
-  }
+    /* Center logo when header is shrunk */
+    .header-nav.header-shrink .header-content {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+    }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 480px) {
-  /* Further adjustments for smaller screens */
-  :root {
-    --header-height: 200px; /* Even more space for very small screens */
-  }
+    /* Further adjustments for smaller screens */
+    :root {
+        --header-height: 200px; /* Even more space for very small screens */
+    }
 }

@@ -1,113 +1,120 @@
 /* From Uiverse.io by vinodjangid07 */
 .social-card {
-  height: fit-content;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  background: transparent;
-  padding: 0;
-  border-radius: 0;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
 }
 
 /* Buttons zu Links geändert */
 .Btn {
-  width: 45px;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  background-color: transparent;
-  position: relative;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: all 0.3s;
-  text-decoration: none; /* Wichtig für Links */
-  outline: none;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none; /* Wichtig für Links */
+    outline: none;
 }
 
 .svgContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  backdrop-filter: blur(0px);
-  letter-spacing: 0.8px;
-  border-radius: 10px;
-  transition: all 0.3s;
-  border: none;
-  z-index: 2;
-  outline: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    letter-spacing: 0.8px;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: none;
+    z-index: 2;
+    outline: none;
 }
 
 /* Stil für die PNG-Icons */
 .social-icon {
-  width: 1.6em; /* Gleiche Größe wie die SVGs */
-  height: 1.6em;
-  filter: brightness(0) invert(1); /* Macht die Icons weiß */
-  transition: all 0.3s;
-  outline: none;
+    width: 1.6em; /* Gleiche Größe wie die SVGs */
+    height: 1.6em;
+    filter: brightness(0) invert(1); /* Macht die Icons weiß */
+    transition: all 0.3s;
+    outline: none;
 }
 
 .BG {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #181818;
-  z-index: 1;
-  border-radius: 10px;
-  pointer-events: none;
-  transition: all 0.3s;
-  font-size: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #181818;
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+    transition: all 0.3s;
+    font-size: 0px;
 }
+
 .github .BG {
-  background: #181818;
+    background: #181818;
 }
+
 .codeberg .BG {
-  background: #183851;
+    background: #183851;
 }
+
 .socials .BG {
-  background: #5f5f5f;
+    background: #5f5f5f;
 }
+
 .linkdin .BG {
-  background: #0077b5;
+    background: #0077b5;
 }
+
 .whatsapp .BG {
-  background: #075e54;
+    background: #075e54;
 }
+
 .discord .BG {
-  background: #7289da;
+    background: #7289da;
 }
+
 .Btn:hover .BG {
-  transform: scale(1.5);
-  /* transform-origin: bottom; */
-  font-size: 20px;
-  color: white;
+    transform: scale(1.5);
+    /* transform-origin: bottom; */
+    font-size: 20px;
+    color: white;
 }
 
 .Btn:hover .svgContainer {
-  border: none;
-  background-color: rgba(209, 209, 209, 0.466);
-  backdrop-filter: blur(4px);
+    border: none;
+    background-color: rgba(209, 209, 209, 0.466);
+    backdrop-filter: blur(4px);
 }
 
 /* Sicherstellen, dass die Links korrekt angezeigt werden */
 .Btn:hover .social-icon {
-  filter: brightness(0) invert(1); /* Bleibt weiß beim Hover */
+    filter: brightness(0) invert(1); /* Bleibt weiß beim Hover */
 }
 
 .Btn:focus {
-  outline: none;
+    outline: none;
 }
 
 .svgContainer:focus {
-  outline: none;
+    outline: none;
 }
 
 .social-icon:focus {
-  outline: none;
+    outline: none;
 }
