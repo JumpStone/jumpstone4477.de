@@ -26,12 +26,9 @@
 
 User-agent: *
 
-Disallow: /gaming/launcher
-Disallow: /gaming/api/
 Allow: /
 
 Sitemap: https://jumpstone4477.de/sitemap.xml
-Sitemap: https://jumpstone4477.de/devreadme/sitemap.xml
 
 #    [   OK   ]
 #      \

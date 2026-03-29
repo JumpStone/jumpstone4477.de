@@ -1,28 +1,4 @@
 [[redirects]]
-  from = "/gaming/*"
-  to = "https://js-gaming-website.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/gaming"
-  to = "https://js-gaming-website.netlify.app/"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/devreadme/*"
-  to = "https://devreadme-website.netlify.app/:splat"
-  status = 200
-  force = true
-
-[[redirects]]
-  from = "/devreadme"
-  to = "https://devreadme-website.netlify.app/"
-  status = 200
-  force = true
-
-[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
