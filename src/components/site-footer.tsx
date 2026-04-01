@@ -15,6 +15,11 @@ export default function SiteFooter() {
                   Home
                 </a>
               </li>
+              <li>
+                <a className="underline underline-offset-2" href="/contact">
+                  Contact Page
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -41,24 +46,28 @@ export default function SiteFooter() {
 
           <div className="rounded-base border-2 border-border bg-background p-4">
             <h3 className="mb-3 text-sm font-heading uppercase tracking-wide">
-              Contact
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a className="underline underline-offset-2" href="/contact">
-                  Contact Page
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <div className="rounded-base border-2 border-border bg-background p-4">
-            <h3 className="mb-3 text-sm font-heading uppercase tracking-wide">
               Appearance
             </h3>
             <div className="mt-1">
               <ThemeModeSelect />
             </div>
+          </div>
+
+          <div className="rounded-base border-2 border-border bg-background p-4">
+            <h3 className="mb-3 text-sm font-heading uppercase tracking-wide">
+              Links
+            </h3>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <a
+                  className="underline underline-offset-2"
+                  href="https://legacy.jumpstone4477.de"
+                  target="_blank"
+                >
+                  Old website
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 

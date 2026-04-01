@@ -26,9 +26,7 @@
 
 User-agent: *
 
-Allow: /
-
-Sitemap: https://jumpstone4477.de/sitemap.xml
+Disallow: /
 
 #    [   OK   ]
 #      \

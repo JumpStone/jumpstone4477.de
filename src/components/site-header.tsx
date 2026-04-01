@@ -57,7 +57,7 @@ export default function SiteHeader({
 
   return (
     <header
-      className="flex items-center justify-between rounded-base border-2 border-border bg-secondary-background/95 p-4 shadow-shadow transition-transform duration-200 backdrop-blur supports-backdrop-filter:bg-secondary-background/85"
+      className="relative flex items-center justify-between rounded-base border-2 border-border bg-secondary-background/95 p-4 shadow-shadow transition-transform duration-200 backdrop-blur supports-backdrop-filter:bg-secondary-background/85"
       style={{ transform: isCompact ? "translateY(-8px)" : "translateY(0)" }}
     >
       <a href="/" className="inline-flex items-center gap-3">
@@ -69,6 +69,13 @@ export default function SiteHeader({
         <span className="text-xl font-heading uppercase tracking-wide">
           {siteName}
         </span>
+      </a>
+
+      <a
+        href="/contact"
+        className="absolute left-1/2 -translate-x-1/2 text-base text-foreground/80 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:underline"
+      >
+        Contact
       </a>
 
       <div className="flex flex-wrap gap-2">
