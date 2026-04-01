@@ -45,11 +45,8 @@ export default function SiteFooter() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a
-                  className="underline underline-offset-2"
-                  href="mailto:hi@jumpstone4477.de"
-                >
-                  hi@jumpstone4477.de
+                <a className="underline underline-offset-2" href="/contact">
+                  Contact Page
                 </a>
               </li>
             </ul>
