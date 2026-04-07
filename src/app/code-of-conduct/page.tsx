@@ -21,10 +21,8 @@ export const metadata: Metadata = {
 export default function CodeOfConductPage() {
   return (
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-0 md:px-8 md:pb-0">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-size-[36px_36px] opacity-10" />
-
-      <section className="mb-8 rounded-base border-2 border-border bg-main p-6 text-main-foreground shadow-shadow md:p-8">
-        <h1 className="mb-2 text-3xl font-heading uppercase tracking-wide md:text-4xl">
+      <section className="mb-8 rounded-base border border-border/30 bg-main p-6 text-main-foreground shadow-sm md:p-8">
+        <h1 className="mb-2 text-3xl font-heading md:text-4xl">
           Code of Conduct
         </h1>
         <p className="max-w-3xl text-sm leading-relaxed md:text-base">
@@ -33,11 +31,9 @@ export default function CodeOfConductPage() {
         </p>
       </section>
 
-      <article className="mb-8 rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow md:p-8">
-        <section className="mb-6 rounded-base border-2 border-border bg-background p-5 shadow-shadow">
-          <h2 className="mb-3 text-xl font-heading uppercase tracking-wide">
-            Our Pledge
-          </h2>
+      <article className="mb-8 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm md:p-8">
+        <section className="mb-6 rounded-base border border-border/30 bg-background p-5 shadow-sm">
+          <h2 className="mb-3 text-xl font-heading">Our Pledge</h2>
           <p className="text-sm leading-relaxed md:text-base">
             I as the maintainer of all JumpStone and JumpStone-Gaming projects,
             am committed to providing a friendly, safe, and welcoming
@@ -48,13 +44,11 @@ export default function CodeOfConductPage() {
           </p>
         </section>
 
-        <section className="mb-6 rounded-base border-2 border-border bg-background p-5 shadow-shadow">
-          <h2 className="mb-4 text-xl font-heading uppercase tracking-wide">
-            Our Standards
-          </h2>
+        <section className="mb-6 rounded-base border border-border/30 bg-background p-5 shadow-sm">
+          <h2 className="mb-4 text-xl font-heading">Our Standards</h2>
 
-          <div className="mb-4 rounded-base border-2 border-border bg-main p-4 text-main-foreground shadow-shadow">
-            <h3 className="mb-2 text-sm font-heading uppercase tracking-wide">
+          <div className="mb-4 rounded-base border border-green-500/30 bg-green-100 p-4 text-green-900 shadow-sm dark:bg-green-950/30 dark:text-green-300">
+            <h3 className="mb-2 text-sm font-heading">
               ✓ Examples of behavior that contributes to a positive environment
               include:
             </h3>
@@ -67,8 +61,8 @@ export default function CodeOfConductPage() {
             </ul>
           </div>
 
-          <div className="rounded-base border-2 border-border bg-[#ff4b2a] p-4 text-black shadow-shadow">
-            <h3 className="mb-2 text-sm font-heading uppercase tracking-wide">
+          <div className="rounded-base border border-red-500/30 bg-red-100 p-4 text-red-900 shadow-sm dark:bg-red-950/30 dark:text-red-300">
+            <h3 className="mb-2 text-sm font-heading">
               ✗ Examples of unacceptable behavior include:
             </h3>
             <ul className="list-disc space-y-1 pl-5 text-sm leading-relaxed md:text-base">
@@ -93,10 +87,8 @@ export default function CodeOfConductPage() {
           </div>
         </section>
 
-        <section className="mb-6 rounded-base border-2 border-border bg-background p-5 shadow-shadow">
-          <h2 className="mb-3 text-xl font-heading uppercase tracking-wide">
-            Scope
-          </h2>
+        <section className="mb-6 rounded-base border border-border/30 bg-background p-5 shadow-sm">
+          <h2 className="mb-3 text-xl font-heading">Scope</h2>
           <p className="text-sm leading-relaxed md:text-base">
             This Code of Conduct applies within all project spaces managed by
             JumpStone and JumpStone-Gaming, and it also applies when an
@@ -108,16 +100,14 @@ export default function CodeOfConductPage() {
           </p>
         </section>
 
-        <section className="mb-6 rounded-base border-2 border-border bg-background p-5 shadow-shadow">
-          <h2 className="mb-3 text-xl font-heading uppercase tracking-wide">
-            Enforcement
-          </h2>
+        <section className="mb-6 rounded-base border border-border/30 bg-background p-5 shadow-sm">
+          <h2 className="mb-3 text-xl font-heading">Enforcement</h2>
           <p className="mb-3 text-sm leading-relaxed md:text-base">
             Responsibilities for clarifying the standards of acceptable behavior
             and taking appropriate and fair corrective action in response to any
             instances of unacceptable behavior lie with the project maintainers.
           </p>
-          <div className="rounded-base border-2 border-border bg-secondary-background p-4">
+          <div className="rounded-base border border-border/30 bg-secondary-background p-4">
             <p className="text-sm leading-relaxed md:text-base">
               If you experience or witness unacceptable behavior, please report
               it to the maintainers via the{" "}
@@ -135,10 +125,8 @@ export default function CodeOfConductPage() {
           </div>
         </section>
 
-        <section className="rounded-base border-2 border-border bg-background p-5 shadow-shadow">
-          <h2 className="mb-3 text-xl font-heading uppercase tracking-wide">
-            Attribution
-          </h2>
+        <section className="rounded-base border border-border/30 bg-background p-5 shadow-sm">
+          <h2 className="mb-3 text-xl font-heading">Attribution</h2>
           <p className="text-sm leading-relaxed md:text-base">
             This Code of Conduct is adapted from the{" "}
             <a
@@ -162,7 +150,7 @@ export default function CodeOfConductPage() {
           </p>
         </section>
 
-        <p className="mt-5 text-xs font-mono uppercase tracking-[0.2em] text-foreground/70">
+        <p className="mt-5 text-xs font-mono text-foreground/70">
           Last Updated: April 2026
         </p>
       </article>

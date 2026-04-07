@@ -20,26 +20,26 @@ export default async function GitHubSections({
     <>
       <section
         id="stats"
-        className="mb-8 rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow"
+        className="mb-8 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm"
       >
         <SectionHeading index="05" title="GitHub Stats" />
 
         {profile ? (
           <div className="grid gap-3 sm:grid-cols-3">
-            <div className="rounded-base border-2 border-border bg-main p-4 text-main-foreground shadow-shadow">
-              <p className="font-mono text-xs uppercase tracking-[0.2em]">
+            <div className="rounded-base border border-border/30 bg-main p-4 text-main-foreground shadow-sm">
+              <p className="font-mono text-xs">
                 Repos
               </p>
               <p className="text-3xl font-heading">{profile.public_repos}</p>
             </div>
-            <div className="rounded-base border-2 border-border bg-chart-2 p-4 text-black shadow-shadow">
-              <p className="font-mono text-xs uppercase tracking-[0.2em]">
+            <div className="rounded-base border border-border/30 bg-chart-2 p-4 text-black shadow-sm">
+              <p className="font-mono text-xs">
                 Followers
               </p>
               <p className="text-3xl font-heading">{profile.followers}</p>
             </div>
-            <div className="rounded-base border-2 border-border bg-chart-3 p-4 text-black shadow-shadow">
-              <p className="font-mono text-xs uppercase tracking-[0.2em]">
+            <div className="rounded-base border border-border/30 bg-chart-3 p-4 text-black shadow-sm">
+              <p className="font-mono text-xs">
                 Following
               </p>
               <p className="text-3xl font-heading">{profile.following}</p>
@@ -58,7 +58,7 @@ export default async function GitHubSections({
 
       <section
         id="github-projects"
-        className="rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow"
+        className="rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm"
       >
         <SectionHeading index="06" title="GitHub Repositories" />
 
@@ -67,7 +67,7 @@ export default async function GitHubSections({
             {repoProjects.map((repo) => (
               <article
                 key={repo.id}
-                className="rounded-base border-2 border-border bg-background p-4 shadow-shadow"
+                className="rounded-base border border-border/30 bg-background p-4 shadow-sm"
               >
                 <div className="mb-3 flex items-start justify-between gap-3">
                   <h3 className="inline-flex items-center gap-2 text-lg font-heading">
@@ -78,7 +78,7 @@ export default async function GitHubSections({
                     href={repo.html_url}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-1 rounded-base border-2 border-border bg-main px-2 py-1 text-xs font-heading uppercase tracking-wide text-main-foreground shadow-shadow"
+                    className="inline-flex items-center gap-1 rounded-base border border-border/30 bg-main px-2 py-1 text-xs font-heading text-main-foreground shadow-sm"
                   >
                     Open <ArrowUpRight className="size-3" />
                   </a>

@@ -21,17 +21,17 @@ export const metadata: Metadata = {
 export default function LegalPage() {
   return (
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-0 md:px-8 md:pb-0">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-size-[36px_36px] opacity-10" />
+      
 
-      <section className="mb-8 rounded-base border-2 border-border bg-main p-6 text-main-foreground shadow-shadow md:p-8">
-        <h1 className="mb-2 text-3xl font-heading uppercase tracking-wide md:text-4xl">
+      <section className="mb-8 rounded-base border border-border/30 bg-main p-6 text-main-foreground shadow-sm md:p-8">
+        <h1 className="mb-2 text-3xl font-heading md:text-4xl">
           Legal
         </h1>
       </section>
 
-      <article className="mb-8 rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow md:p-8">
-        <section className="mb-6 rounded-base border-2 border-border bg-background p-5 shadow-shadow">
-          <h2 className="mb-3 text-xl font-heading uppercase tracking-wide">
+      <article className="mb-8 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm md:p-8">
+        <section className="mb-6 rounded-base border border-border/30 bg-background p-5 shadow-sm">
+          <h2 className="mb-3 text-xl font-heading">
             About this Website
           </h2>
           <p className="text-sm leading-relaxed md:text-base">
@@ -47,8 +47,8 @@ export default function LegalPage() {
           </p>
         </section>
 
-        <section className="mb-6 rounded-base border-2 border-border bg-background p-5 shadow-shadow">
-          <h2 className="mb-3 text-xl font-heading uppercase tracking-wide">
+        <section className="mb-6 rounded-base border border-border/30 bg-background p-5 shadow-sm">
+          <h2 className="mb-3 text-xl font-heading">
             Contact
           </h2>
           <p className="mb-4 text-sm leading-relaxed md:text-base">
@@ -57,14 +57,14 @@ export default function LegalPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-base border-2 border-border bg-main px-4 py-2 text-sm font-heading uppercase tracking-wide text-main-foreground shadow-shadow transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-main px-4 py-2 text-sm font-heading text-main-foreground shadow-sm transition-opacity hover:opacity-80"
           >
             Go to Contact
           </Link>
         </section>
 
-        <section className="rounded-base border-2 border-border bg-background p-5 shadow-shadow">
-          <h2 className="mb-3 text-xl font-heading uppercase tracking-wide">
+        <section className="rounded-base border border-border/30 bg-background p-5 shadow-sm">
+          <h2 className="mb-3 text-xl font-heading">
             Liability for Links
           </h2>
           <p className="text-sm leading-relaxed md:text-base">

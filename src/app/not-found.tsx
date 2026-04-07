@@ -11,11 +11,11 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <main className="relative mx-auto flex min-h-screen w-full max-w-6xl flex-col px-4 md:px-8">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-size-[36px_36px] opacity-10" />
+      
 
       <div className="flex flex-1 flex-col justify-center gap-8 py-12 md:py-16">
-        <section className="rounded-base border-2 border-border bg-main p-6 text-main-foreground shadow-shadow md:p-8">
-          <p className="mb-3 inline-flex items-center gap-2 rounded-base border-2 border-main-foreground/40 bg-main-foreground/10 px-3 py-1 text-xs font-heading uppercase tracking-wide">
+        <section className="rounded-base border border-border/30 bg-main p-6 text-main-foreground shadow-sm md:p-8">
+          <p className="mb-3 inline-flex items-center gap-2 rounded-base border border-main-foreground/40 bg-main-foreground/10 px-3 py-1 text-xs font-heading">
             <span className="font-mono text-[11px]">404</span>
             Page not found
           </p>
@@ -29,14 +29,14 @@ export default function NotFound() {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 rounded-base border-2 border-border bg-secondary-background px-3 py-1.5 text-sm font-heading text-foreground shadow-shadow transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-secondary-background px-3 py-1.5 text-sm font-heading text-foreground shadow-sm transition-opacity hover:opacity-80"
             >
               <Home className="size-4" />
               Back to home
             </Link>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-base border-2 border-border bg-background px-3 py-1.5 text-sm font-heading text-foreground shadow-shadow transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-background px-3 py-1.5 text-sm font-heading text-foreground shadow-sm transition-opacity hover:opacity-80"
             >
               <Mail className="size-4" />
               Contact me
@@ -45,8 +45,8 @@ export default function NotFound() {
         </section>
 
         <section className="grid gap-4 md:grid-cols-2">
-          <article className="rounded-base border-2 border-border bg-secondary-background p-5 shadow-shadow">
-            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-border/60 bg-background px-3 py-1 text-xs font-heading uppercase tracking-wide text-foreground/70">
+          <article className="rounded-base border border-border/30 bg-secondary-background p-5 shadow-sm">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full border border-border/30 bg-background px-3 py-1 text-xs font-heading text-foreground/70">
               <Compass className="size-4" />
               Quick directions
             </div>
@@ -56,7 +56,7 @@ export default function NotFound() {
             <div className="flex flex-col gap-2">
               <Link
                 href="/#projects"
-                className="inline-flex items-center justify-between rounded-base border-2 border-border bg-background px-3 py-2 text-sm font-heading shadow-shadow transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-between rounded-base border border-border/30 bg-background px-3 py-2 text-sm font-heading shadow-sm transition-opacity hover:opacity-80"
               >
                 Featured projects
                 <span
@@ -68,7 +68,7 @@ export default function NotFound() {
               </Link>
               <Link
                 href="/code-of-conduct"
-                className="inline-flex items-center justify-between rounded-base border-2 border-border bg-background px-3 py-2 text-sm font-heading shadow-shadow transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-between rounded-base border border-border/30 bg-background px-3 py-2 text-sm font-heading shadow-sm transition-opacity hover:opacity-80"
               >
                 Code of Conduct
                 <span
@@ -80,7 +80,7 @@ export default function NotFound() {
               </Link>
               <Link
                 href="/legal"
-                className="inline-flex items-center justify-between rounded-base border-2 border-border bg-background px-3 py-2 text-sm font-heading shadow-shadow transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-between rounded-base border border-border/30 bg-background px-3 py-2 text-sm font-heading shadow-sm transition-opacity hover:opacity-80"
               >
                 Legal notice
                 <span
@@ -93,7 +93,7 @@ export default function NotFound() {
             </div>
           </article>
 
-          <article className="rounded-base border-2 border-border bg-secondary-background p-5 shadow-shadow">
+          <article className="rounded-base border border-border/30 bg-secondary-background p-5 shadow-sm">
             <h2 className="mb-2 text-xl font-heading">What you can try</h2>
             <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-foreground/80">
               <li>Check the URL for typos or missing parts.</li>

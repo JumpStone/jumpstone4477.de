@@ -27,7 +27,7 @@ const socialLinks = [
 ];
 
 function socialIconButtonClassName() {
-  return "inline-flex size-11 items-center justify-center rounded-base border-2 border-border bg-secondary-background shadow-shadow transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5 hover:bg-main";
+  return "inline-flex size-11 items-center justify-center rounded-base border border-border/30 bg-secondary-background shadow-sm transition-opacity hover:opacity-80 hover:bg-main";
 }
 
 export default function SiteHeader({
@@ -57,18 +57,16 @@ export default function SiteHeader({
 
   return (
     <header
-      className="relative flex items-center justify-between rounded-base border-2 border-border bg-secondary-background/95 p-4 shadow-shadow transition-transform duration-200 backdrop-blur supports-backdrop-filter:bg-secondary-background/85"
+      className="relative flex items-center justify-between rounded-base border border-border/30 bg-secondary-background/95 p-4 shadow-sm transition-transform duration-200 backdrop-blur supports-backdrop-filter:bg-secondary-background/85"
       style={{ transform: isCompact ? "translateY(-8px)" : "translateY(0)" }}
     >
       <a href="/" className="inline-flex items-center gap-3">
         <img
           src={logoSrc}
           alt={`${siteName} Logo`}
-          className="size-10 rounded-base border-2 border-border bg-background p-1 shadow-shadow"
+          className="size-10 rounded-base border border-border/30 bg-background p-1 shadow-sm"
         />
-        <span className="text-xl font-heading uppercase tracking-wide">
-          {siteName}
-        </span>
+        <span className="text-xl font-semibold">{siteName}</span>
       </a>
 
       <a

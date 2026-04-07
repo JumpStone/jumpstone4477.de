@@ -58,7 +58,7 @@ function ProjectGrid({ projects }: { projects: ProjectCard[] }) {
       {projects.map((project) => (
         <article
           key={project.title}
-          className="rounded-base border-2 border-border bg-secondary-background p-5 shadow-shadow"
+          className="rounded-base border border-border/30 bg-secondary-background p-5 shadow-sm"
         >
           <h3 className="mb-3 text-xl font-heading">{project.title}</h3>
           <p className="mb-4 text-sm leading-relaxed text-foreground/80">
@@ -80,7 +80,7 @@ function ProjectGrid({ projects }: { projects: ProjectCard[] }) {
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-base border-2 border-border bg-main px-3 py-1.5 text-sm font-heading text-main-foreground shadow-shadow transition-transform hover:-translate-x-0.5 hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-main px-3 py-1.5 text-sm font-heading text-main-foreground shadow-sm transition-opacity hover:opacity-80"
               >
                 {link.label}
                 <ArrowUpRight className="size-4" />
@@ -96,15 +96,9 @@ function ProjectGrid({ projects }: { projects: ProjectCard[] }) {
 export default function Page() {
   return (
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-0 md:px-8 md:pb-0">
-      <div className="pointer-events-none fixed inset-0 -z-10 bg-[linear-gradient(to_right,var(--color-border)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-border)_1px,transparent_1px)] bg-size-[36px_36px] opacity-10" />
-
-      <section className="mb-8 rounded-base border-2 border-border bg-main p-6 text-main-foreground shadow-shadow md:p-8">
+      <section className="mb-8 rounded-base border border-border/30 bg-main p-6 text-main-foreground shadow-sm md:p-8">
         <h1 className="mb-3 text-3xl font-heading leading-tight sm:text-5xl">
-          Hi, I&apos;m{" "}
-          <span className="glitch-name" data-text="Henry">
-            Henry
-          </span>
-          .
+          Hi, I&apos;m <span className="text-foreground">Henry</span>.
         </h1>
         <p className="max-w-2xl text-base leading-relaxed">
           Software developer and hardware enthusiast from Germany
@@ -113,49 +107,46 @@ export default function Page() {
 
       <section
         id="about"
-        className="mb-8 rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow"
+        className="mb-8 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm"
       >
         <SectionHeading index="02" title="About" />
-        <p className="mb-4 max-w-4xl text-sm leading-relaxed md:text-base">
-          I am a self-taught developer and sysadmin currently in secondary
-          school. While others are just consuming content, I prefer building the
-          infrastructure behind it. My focus lies in automating processes and
-          maintaining secure, scalable HomeLab systems.
-        </p>
-        <h2 className="mb-3 text-xl font-heading">The Story:</h2>
-        <ul className="list-disc pl-6">
-          <li className="mb-2 text-sm leading-relaxed md:text-base">
-            The Spark: It all started with a fascination for hardware and the
-            question of how to not just use PC systems, but to configure and
-            optimize them from the ground up.
-          </li>
-          <li className="mb-2 text-sm leading-relaxed md:text-base">
-            From Gaming to Admin: Building and technically leading a Minecraft
-            network was my "baptism by fire" in terms of community management
-            and server stability.
-          </li>
-          <li className="mb-2 text-sm leading-relaxed md:text-base">
-            Deep Dive: Standard software soon wasn't enough. I dove into the
-            world of Linux (Debian, Fedora), Docker virtualization, and
-            professional monitoring with Grafana & Prometheus.
-          </li>
-          <li className="mb-2 text-sm leading-relaxed md:text-base">
-            Current Mission: My biggest achievement so far has been winning 1st
-            place in the "Jugend forscht" regional round (2026). Currently, I am
-            tinkering with custom hardware like my Python-based travel router
-            and preparing for the state-level competition.
-          </li>
-        </ul>
-        <h2 className="mb-3 text-xl font-heading">Why I Do What I Do:</h2>
-        <p className="mb-4 max-w-4xl text-sm leading-relaxed md:text-base">
-          I love solving complex problems that others don't even see. My goal is
-          to understand, bend, and improve technology.
-        </p>
+
+        <div className="mt-6 space-y-8 text-foreground">
+          <div>
+            <h3 className="mb-4 text-xl font-bold">Currently learning</h3>
+            <img
+              src="https://skillicons.dev/icons?i=js,ts,githubactions"
+              alt="Currently learning"
+            />
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-xl font-bold">Tools</h3>
+            <img
+              src="https://skillicons.dev/icons?i=git,github,githubactions,cloudflare,docker,firebase,mysql,redis,npm,nginx,vscode,idea,arduino,bash,powershell&perline=10"
+              alt="Tools"
+              className="max-w-full"
+            />
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-xl font-bold">Libraries</h3>
+            <img src="https://skillicons.dev/icons?i=nextjs" alt="Libraries" />
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-xl font-bold">Programming Languages</h3>
+            <img
+              src="https://skillicons.dev/icons?i=html,css,js,ts"
+              alt="Programming Languages"
+            />
+          </div>
+        </div>
       </section>
 
       <section
         id="projects"
-        className="mb-8 rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow"
+        className="mb-8 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm"
       >
         <SectionHeading index="03" title="Featured Projects" />
         <ProjectGrid projects={featuredProjects} />
@@ -163,7 +154,7 @@ export default function Page() {
 
       <section
         id="other-projects"
-        className="mb-8 rounded-base border-2 border-border bg-secondary-background p-6 shadow-shadow"
+        className="mb-8 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm"
       >
         <SectionHeading index="04" title="Other Projects" />
         <ProjectGrid projects={otherProjects} />

@@ -14,7 +14,7 @@ export default function ThemeModeSelect() {
 
   return (
     <div className="w-full max-w-48">
-      <p className="mb-2 text-xs font-heading uppercase tracking-[0.2em]">
+      <p className="mb-2 text-xs font-heading">
         Theme
       </p>
       <Select
