@@ -27,21 +27,15 @@ export default async function GitHubSections({
         {profile ? (
           <div className="grid gap-3 sm:grid-cols-3">
             <div className="rounded-base border border-border/30 bg-main p-4 text-main-foreground shadow-sm">
-              <p className="font-mono text-xs">
-                Repos
-              </p>
+              <p className="font-mono text-xs">Repos</p>
               <p className="text-3xl font-heading">{profile.public_repos}</p>
             </div>
-            <div className="rounded-base border border-border/30 bg-chart-2 p-4 text-black shadow-sm">
-              <p className="font-mono text-xs">
-                Followers
-              </p>
+            <div className="rounded-base border border-border/30 bg-main p-4 text-main-foreground shadow-sm">
+              <p className="font-mono text-xs">Followers</p>
               <p className="text-3xl font-heading">{profile.followers}</p>
             </div>
-            <div className="rounded-base border border-border/30 bg-chart-3 p-4 text-black shadow-sm">
-              <p className="font-mono text-xs">
-                Following
-              </p>
+            <div className="rounded-base border border-border/30 bg-main p-4 text-main-foreground shadow-sm">
+              <p className="font-mono text-xs">Following</p>
               <p className="text-3xl font-heading">{profile.following}</p>
             </div>
           </div>

@@ -132,11 +132,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col">
         <ThemeModeProvider>
-          <div className="fixed inset-x-0 top-0 z-50">
-            <div className="relative mx-auto w-full max-w-6xl px-4 pt-4 md:px-8 md:pt-6">
-              <SiteHeader />
-            </div>
-          </div>
+          <SiteHeader />
 
           <div className="h-28 md:h-32" aria-hidden="true" />
 

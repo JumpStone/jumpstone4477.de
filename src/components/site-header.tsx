@@ -26,10 +26,6 @@ const socialLinks = [
   },
 ];
 
-function socialIconButtonClassName() {
-  return "inline-flex size-11 items-center justify-center rounded-base border border-border/30 bg-secondary-background shadow-sm transition-opacity hover:opacity-80 hover:bg-main";
-}
-
 export default function SiteHeader({
   logoSrc = "/logo.png",
   siteName = "JumpStone",
@@ -38,64 +34,94 @@ export default function SiteHeader({
   const [isCompact, setIsCompact] = useState(false);
 
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const onScroll = () => {
-      const y = window.scrollY;
-      setIsCompact((current) => {
-        if (!current && y > 28) return true;
-        if (current && y < 12) return false;
-        return current;
-      });
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > lastScrollY;
+
+      if (currentScrollY <= 40) {
+        setIsCompact(false);
+      } else if (isScrollingDown && currentScrollY > 60) {
+        setIsCompact(true);
+      } else if (!isScrollingDown && lastScrollY - currentScrollY > 10) {
+        setIsCompact(false);
+      }
+
+      lastScrollY = currentScrollY;
     };
 
-    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-    };
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
-    <header
-      className="relative flex items-center justify-between rounded-base border border-border/30 bg-secondary-background/95 p-4 shadow-sm transition-transform duration-200 backdrop-blur supports-backdrop-filter:bg-secondary-background/85"
-      style={{ transform: isCompact ? "translateY(-8px)" : "translateY(0)" }}
+    <div
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        isCompact ? "px-0 pt-0" : "px-4 pt-4 md:px-8 md:pt-6"
+      }`}
     >
-      <a href="/" className="inline-flex items-center gap-3">
-        <img
-          src={logoSrc}
-          alt={`${siteName} Logo`}
-          className="size-10 rounded-base border border-border/30 bg-background p-1 shadow-sm"
-        />
-        <span className="text-xl font-semibold">{siteName}</span>
-      </a>
-
-      <a
-        href="/contact"
-        className="absolute left-1/2 -translate-x-1/2 text-base text-foreground/80 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:underline"
-      >
-        Contact
-      </a>
-
-      <div className="flex flex-wrap gap-2">
-        {socialLinks.map((link) => (
-          <a
-            key={link.href}
-            className={socialIconButtonClassName()}
-            href={link.href}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={link.label}
-            title={link.label}
-          >
+      <div className="mx-auto w-full max-w-6xl transition-all duration-300">
+        <header
+          className={`relative flex items-center justify-between bg-secondary-background/95 transition-all duration-300 backdrop-blur supports-backdrop-filter:bg-secondary-background/85 ${
+            isCompact
+              ? "rounded-none border-b border-border/30 p-2 md:px-6 shadow-sm"
+              : "rounded-base border border-border/30 p-4 shadow-sm"
+          }`}
+        >
+          <a href="/" className="inline-flex items-center gap-3">
             <img
-              src={`/badges/${link.iconName}${effectiveMode === "light" ? "-dark" : ""}.png`}
-              alt=""
-              aria-hidden="true"
-              className="size-5 object-contain"
+              src={logoSrc}
+              alt={`${siteName} Logo`}
+              className={`rounded-base border border-border/30 bg-background shadow-sm transition-all duration-300 ${
+                isCompact ? "size-8 p-1" : "size-10 p-1.5"
+              }`}
             />
+            <span
+              className={`font-semibold transition-all duration-300 ${
+                isCompact ? "text-lg" : "text-xl"
+              }`}
+            >
+              {siteName}
+            </span>
           </a>
-        ))}
+
+          <a
+            href="/contact"
+            className={`absolute left-1/2 -translate-x-1/2 text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
+              isCompact ? "text-sm" : "text-base"
+            }`}
+          >
+            Contact
+          </a>
+
+          <div className="flex flex-wrap gap-2">
+            {socialLinks.map((link) => (
+              <a
+                key={link.href}
+                className={`inline-flex items-center justify-center rounded-base border border-border/30 bg-secondary-background shadow-sm transition-all duration-300 hover:opacity-80 hover:bg-main ${
+                  isCompact ? "size-8" : "size-11"
+                }`}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={link.label}
+                title={link.label}
+              >
+                <img
+                  src={`/badges/${link.iconName}${effectiveMode === "light" ? "-dark" : ""}.png`}
+                  alt=""
+                  aria-hidden="true"
+                  className={`object-contain transition-all duration-300 ${
+                    isCompact ? "size-4" : "size-5"
+                  }`}
+                />
+              </a>
+            ))}
+          </div>
+        </header>
       </div>
-    </header>
+    </div>
   );
 }
+
