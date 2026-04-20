@@ -124,7 +124,7 @@ export default function SubSite() {
 
         <div className="mt-6">
           <Link
-            href="/subsite/projects"
+            href="/projects"
             className="inline-flex items-center gap-2.5 rounded-base border border-border/30 bg-main px-5 py-2.5 text-base font-heading text-main-foreground shadow-sm transition-opacity hover:opacity-80"
           >
             All projects

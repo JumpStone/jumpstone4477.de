@@ -76,7 +76,7 @@ function ProjectGrid({ projects }: { projects: SubsiteProject[] }) {
 
           <div className="flex flex-wrap gap-2">
             <Link
-              href={`/subsite/projects/${project.slug}`}
+              href={`/projects/${project.slug}`}
               className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-background px-3 py-1.5 text-sm font-heading text-foreground shadow-sm transition-opacity hover:opacity-80"
             >
               Details
@@ -127,22 +127,22 @@ export default async function ProjectsPage({
         <SectionHeading index="02" title="Sort" />
         <div className="mt-4 flex flex-wrap gap-2">
           <SortButton
-            href="/subsite/projects?sortBy=priority&direction=asc"
+            href="/projects?sortBy=priority&direction=asc"
             label="Priority Asc"
             active={sortBy === "priority" && direction === "asc"}
           />
           <SortButton
-            href="/subsite/projects?sortBy=priority&direction=desc"
+            href="/projects?sortBy=priority&direction=desc"
             label="Priority Desc"
             active={sortBy === "priority" && direction === "desc"}
           />
           <SortButton
-            href="/subsite/projects?sortBy=date&direction=asc"
+            href="/projects?sortBy=date&direction=asc"
             label="Date Asc"
             active={sortBy === "date" && direction === "asc"}
           />
           <SortButton
-            href="/subsite/projects?sortBy=date&direction=desc"
+            href="/projects?sortBy=date&direction=desc"
             label="Date Desc"
             active={sortBy === "date" && direction === "desc"}
           />
