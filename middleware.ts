@@ -1,7 +1,11 @@
 import { NextResponse, type NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  if (request.nextUrl.hostname !== "jumpstone4477-de.vercel.app") {
+  const hostname = request.nextUrl.hostname.toLowerCase();
+  const shouldRewriteToSubsite =
+    hostname === "jumpstone.is-a.dev" || hostname.endsWith(".vercel.app");
+
+  if (!shouldRewriteToSubsite) {
     return NextResponse.next();
   }
 
