@@ -32,7 +32,7 @@ function ProjectGrid({ projects }: { projects: SubsiteProject[] }) {
 
           <div className="flex flex-wrap gap-2">
             <Link
-              href={`/subsite/projects/${project.slug}`}
+              href={`/projects/${project.slug}`}
               className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-background px-3 py-1.5 text-sm font-heading text-foreground shadow-sm transition-opacity hover:opacity-80"
             >
               Details
