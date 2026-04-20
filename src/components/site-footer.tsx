@@ -6,7 +6,9 @@ export default async function SiteFooter() {
   const host = (await headers()).get("host")?.toLowerCase() ?? "";
   const isSubsiteDomain =
     host === "jumpstone.is-a.dev" || host.endsWith(".vercel.app");
-  const homeHref = isSubsiteDomain ? "https://jumpstone4477.de/" : "/";
+  const rootDomain = "https://jumpstone4477.de";
+  const toMainDomain = (path: string) =>
+    isSubsiteDomain ? `${rootDomain}${path}` : path;
 
   return (
     <footer className="mt-8 border-t border-border/30 bg-secondary-background ml-[calc(50%-50vw)] mr-[calc(50%-50vw)]">
@@ -17,22 +19,37 @@ export default async function SiteFooter() {
             <ul className="space-y-2 text-sm">
               <li>
                 {isSubsiteDomain ? (
-                  <a className="underline underline-offset-2" href={homeHref}>
+                  <a
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/")}
+                  >
                     Home
                   </a>
                 ) : (
                   <Link
                     className="underline underline-offset-2"
-                    href={homeHref}
+                    href={toMainDomain("/")}
                   >
                     Home
                   </Link>
                 )}
               </li>
               <li>
-                <Link className="underline underline-offset-2" href="/contact">
-                  Contact
-                </Link>
+                {isSubsiteDomain ? (
+                  <a
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/contact")}
+                  >
+                    Contact
+                  </a>
+                ) : (
+                  <Link
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/contact")}
+                  >
+                    Contact
+                  </Link>
+                )}
               </li>
             </ul>
           </div>
@@ -41,28 +58,55 @@ export default async function SiteFooter() {
             <h3 className="mb-3 text-sm font-heading">Legal</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link
-                  className="underline underline-offset-2"
-                  href="/legal/imprint"
-                >
-                  Imprint
-                </Link>
+                {isSubsiteDomain ? (
+                  <a
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/legal/imprint")}
+                  >
+                    Imprint
+                  </a>
+                ) : (
+                  <Link
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/legal/imprint")}
+                  >
+                    Imprint
+                  </Link>
+                )}
               </li>
               <li>
-                <Link
-                  className="underline underline-offset-2"
-                  href="/legal/privacy"
-                >
-                  Privacy Policy
-                </Link>
+                {isSubsiteDomain ? (
+                  <a
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/legal/privacy")}
+                  >
+                    Privacy Policy
+                  </a>
+                ) : (
+                  <Link
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/legal/privacy")}
+                  >
+                    Privacy Policy
+                  </Link>
+                )}
               </li>
               <li>
-                <Link
-                  className="underline underline-offset-2"
-                  href="/code-of-conduct"
-                >
-                  Code of Conduct
-                </Link>
+                {isSubsiteDomain ? (
+                  <a
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/code-of-conduct")}
+                  >
+                    Code of Conduct
+                  </a>
+                ) : (
+                  <Link
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/code-of-conduct")}
+                  >
+                    Code of Conduct
+                  </Link>
+                )}
               </li>
             </ul>
           </div>
