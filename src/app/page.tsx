@@ -116,6 +116,40 @@ export default function Page() {
       </section>
 
       <section
+        id="about"
+        className="mb-8 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm"
+      >
+        <SectionHeading index="04" title="Skills" />
+
+        <div className="mt-6 space-y-8 text-foreground">
+          <div>
+            <h3 className="mb-4 text-xl font-bold">Currently learning</h3>
+            <img
+              src="https://skillicons.dev/icons?i=js,ts,githubactions"
+              alt="Currently learning"
+            />
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-xl font-bold">Tools</h3>
+            <img
+              src="https://skillicons.dev/icons?i=git,github,githubactions,cloudflare,docker,mysql,arduino,bash,powershell&perline=10"
+              alt="Tools"
+              className="max-w-full"
+            />
+          </div>
+
+          <div>
+            <h3 className="mb-4 text-xl font-bold">Programming Languages</h3>
+            <img
+              src="https://skillicons.dev/icons?i=html,css,js,ts"
+              alt="Programming Languages"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section
         id="projects"
         className="mb-8 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm"
       >
