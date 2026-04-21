@@ -21,18 +21,21 @@ const baseUrl = process.env.NEXT_PUBLIC_URL || "https://jumpstone4477.de";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "JumpStone",
-    template: "%s | JumpStone",
+    default: "Henry aka JumpStone",
+    template: "%s | Henry aka JumpStone",
   },
   description:
-    "JumpStone: Developer portfolio showcasing open source projects in gaming, hardware, and web technologies. Explore Minecraft modding, Arduino projects, and web applications.",
+    "My personal portfolio, focused on what I build, what I can do, and the projects, tools, and technologies I work with.",
   keywords: [
+    "personal portfolio",
     "developer",
+    "software developer",
     "portfolio",
+    "projects",
     "open source",
-    "minecraft modding",
-    "arduino",
     "web development",
+    "gaming",
+    "hardware",
     "JumpStone",
   ],
   robots: {
@@ -50,24 +53,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: baseUrl,
-    siteName: "JumpStone",
-    title: "JumpStone | Developer Portfolio & Open Source Projects",
+    siteName: "Henry aka JumpStone",
+    title: "Henry aka JumpStone | Personal Portfolio & Projects",
     description:
-      "Discover open source projects in gaming, hardware, and web technologies",
+      "A personal portfolio by Henry aka JumpStone about what I build, what I can do, and the technologies behind my projects.",
     images: [
       {
         url: `${baseUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "JumpStone - Developer Portfolio",
+        alt: "Henry aka JumpStone personal portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JumpStone | Developer Portfolio & Open Source Projects",
+    title: "Henry aka JumpStone | Personal Portfolio & Projects",
     description:
-      "Discover open source projects in gaming, hardware, and web technologies",
+      "A personal portfolio by Henry aka JumpStone about what I build, what I can do, and the technologies behind my projects.",
     images: [`${baseUrl}/og-image.png`],
   },
   alternates: {
@@ -108,10 +111,10 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "JumpStone",
+    name: "Henry aka JumpStone",
     url: baseUrl,
     description:
-      "Developer showcasing open source projects in gaming, hardware, and web technologies",
+      "Personal portfolio by Henry aka JumpStone showing projects, skills, and the technologies behind my work",
     sameAs: [
       "https://github.com/jumpstone-gaming",
       "https://github.com/akku-craft",

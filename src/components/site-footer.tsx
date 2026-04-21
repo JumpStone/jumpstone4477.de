@@ -5,7 +5,7 @@ import ThemeModeSelect from "@/components/theme-mode-select";
 export default async function SiteFooter() {
   const host = (await headers()).get("host")?.toLowerCase() ?? "";
   const isSubsiteDomain =
-    host === "jumpstone.is-a.dev" || host.endsWith(".vercel.app");
+    host === "jumpstone.is-cool.dev" || host.endsWith(".vercel.app");
   const rootDomain = "https://jumpstone4477.de";
   const toMainDomain = (path: string) =>
     isSubsiteDomain ? `${rootDomain}${path}` : path;
@@ -50,6 +50,14 @@ export default async function SiteFooter() {
                     Contact
                   </Link>
                 )}
+              </li>
+              <li>
+                <a
+                  className="underline underline-offset-2"
+                  href="https://jumpstone.is-cool.dev"
+                >
+                  Developer Portfolio
+                </a>
               </li>
             </ul>
           </div>

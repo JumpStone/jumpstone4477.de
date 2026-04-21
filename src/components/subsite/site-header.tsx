@@ -23,7 +23,7 @@ const socialLinks = [
 
 export default function SiteHeader({
   logoSrc = "/logo.png",
-  siteName = "JumpStone Dev",
+  siteName = "JumpStone Dev Portfolio",
 }: SiteHeaderProps) {
   const { effectiveMode } = useThemeMode();
   const [isCompact, setIsCompact] = useState(false);
@@ -81,22 +81,27 @@ export default function SiteHeader({
             </span>
           </a>
 
-          <a
-            href="https://jumpstone4477.de"
-            className={`absolute left-1/2 -translate-x-1/2 text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
-              isCompact ? "text-sm" : "text-base"
-            }`}
+          <nav
+            aria-label="Primary"
+            className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-4 whitespace-nowrap"
           >
-            Main Website
-          </a>
-          <a
-            href="https://jumpstone4477.de/contact"
-            className={`absolute left-1/2 -translate-x-1/2 text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
-              isCompact ? "text-sm" : "text-base"
-            }`}
-          >
-            Contact
-          </a>
+            <a
+              href="https://jumpstone4477.de"
+              className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
+                isCompact ? "text-sm" : "text-base"
+              }`}
+            >
+              Website
+            </a>
+            <a
+              href="https://jumpstone4477.de/contact"
+              className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
+                isCompact ? "text-sm" : "text-base"
+              }`}
+            >
+              Contact
+            </a>
+          </nav>
 
           <div className="flex flex-wrap gap-2">
             {socialLinks.map((link) => (

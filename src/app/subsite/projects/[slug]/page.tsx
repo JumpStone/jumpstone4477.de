@@ -37,7 +37,9 @@ export async function generateMetadata({
   const canonicalUrl = `${baseUrl}/projects/${project.slug}`;
 
   return {
-    title: project.title,
+    title: {
+      absolute: `${project.title} | JumpStone Dev`,
+    },
     description: project.description,
     alternates: {
       canonical: canonicalUrl,

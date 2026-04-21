@@ -86,14 +86,27 @@ export default function SiteHeader({
             </span>
           </a>
 
-          <a
-            href="/contact"
-            className={`absolute left-1/2 -translate-x-1/2 text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
-              isCompact ? "text-sm" : "text-base"
-            }`}
+          <nav
+            aria-label="Primary"
+            className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-4 whitespace-nowrap"
           >
-            Contact
-          </a>
+            <a
+              href="https://jumpstone.is-cool.dev"
+              className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
+                isCompact ? "text-sm" : "text-base"
+              }`}
+            >
+              Developer Portfolio
+            </a>
+            <a
+              href="/contact"
+              className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
+                isCompact ? "text-sm" : "text-base"
+              }`}
+            >
+              Contact
+            </a>
+          </nav>
 
           <div className="flex flex-wrap gap-2">
             {socialLinks.map((link) => (
@@ -124,4 +137,3 @@ export default function SiteHeader({
     </div>
   );
 }
-

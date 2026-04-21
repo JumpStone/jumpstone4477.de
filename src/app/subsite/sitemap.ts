@@ -3,7 +3,7 @@ import { getSubsiteProjectSlugs } from "@/lib/subsite-projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SUBSITE_URL || "https://jumpstone.is-a.dev";
+    process.env.NEXT_PUBLIC_SUBSITE_URL || "https://jumpstone.is-cool.dev";
   const projectEntries = getSubsiteProjectSlugs().map((slug) => ({
     url: `${baseUrl}/projects/${slug}`,
     lastModified: new Date(),

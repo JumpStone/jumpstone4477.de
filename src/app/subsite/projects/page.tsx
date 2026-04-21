@@ -6,6 +6,7 @@ import {
   type SubsiteProject,
 } from "@/lib/subsite-projects";
 import { ArrowUpRight } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
 
 type ProjectsPageProps = {
@@ -48,6 +49,12 @@ function SortButton({
     </Link>
   );
 }
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Projects | JumpStone Dev",
+  },
+};
 
 function ProjectGrid({ projects }: { projects: SubsiteProject[] }) {
   return (

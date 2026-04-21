@@ -4,7 +4,7 @@ import SiteHeader from "@/components/subsite/site-header";
 import { ThemeModeProvider } from "@/components/theme-mode-provider";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
-import "../globals.css";
+import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -17,24 +17,26 @@ const geistMono = Geist_Mono({
 });
 
 const baseUrl =
-  process.env.NEXT_PUBLIC_SUBSITE_URL || "https://jumpstone.is-a.dev";
+  process.env.NEXT_PUBLIC_SUBSITE_URL || "https://jumpstone.is-cool.dev";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: "JumpStone Dev",
-    template: "%s | JumpStone Dev",
+    absolute: "Henry aka JumpStone Dev",
   },
   description:
-    "JumpStone: Developer portfolio showcasing open source projects in gaming, hardware, and web technologies. Explore Minecraft modding, Arduino projects, and web applications.",
+    "My dev portfolio is a technical deep dive into my projects, with code snippets, implementation details, and more.",
   keywords: [
+    "technical deep dive",
+    "code snippets",
+    "Henry aka JumpStone Dev Portfolio",
     "developer",
     "portfolio",
+    "projects",
     "open source",
-    "minecraft modding",
-    "arduino",
+    "technical writing",
     "web development",
-    "JumpStone",
+    "Henry aka JumpStone Dev",
   ],
   robots: {
     index: true,
@@ -51,24 +53,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: baseUrl,
-    siteName: "JumpStone",
-    title: "JumpStone | Developer Portfolio & Open Source Projects",
+    siteName: "Henry aka JumpStone Dev",
+    title: "Henry aka JumpStone Dev | Technical Deep Dive",
     description:
-      "Discover open source projects in gaming, hardware, and web technologies",
+      "Technical deep dives by Henry aka JumpStone into my projects, code snippets, implementation details, and more.",
     images: [
       {
         url: `${baseUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "JumpStone - Developer Portfolio",
+        alt: "Henry aka JumpStone Dev Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "JumpStone | Developer Portfolio & Open Source Projects",
+    title: "Henry aka JumpStone Dev Portfolio | Technical Deep Dive",
     description:
-      "Discover open source projects in gaming, hardware, and web technologies",
+      "Technical deep dives by Henry aka JumpStone into my projects, code snippets, implementation details, and more.",
     images: [`${baseUrl}/og-image.png`],
   },
   alternates: {
@@ -109,10 +111,10 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "JumpStone",
+    name: "Henry aka JumpStone",
     url: baseUrl,
     description:
-      "Developer showcasing open source projects in gaming, hardware, and web technologies",
+      "Henry aka JumpStone showcasing open source projects in gaming, hardware, and web technologies",
     sameAs: [
       "https://github.com/jumpstone-gaming",
       "https://github.com/akku-craft",

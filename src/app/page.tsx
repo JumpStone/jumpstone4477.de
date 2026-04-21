@@ -124,7 +124,7 @@ export default function Page() {
 
         <div className="mt-6">
           <a
-            href="https://jumpstone.is-a.dev/projects"
+            href="https://jumpstone.is-cool.dev/projects"
             rel="noreferrer"
             className="inline-flex items-center gap-2.5 rounded-base border border-border/30 bg-main px-5 py-2.5 text-base font-heading text-main-foreground shadow-sm transition-opacity hover:opacity-80"
           >
