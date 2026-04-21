@@ -106,7 +106,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
 
         <div className="mt-6 flex flex-wrap gap-2">
           <Link
-            href="/subsite#projects"
+            href="/projects"
             className="inline-flex items-center rounded-base border border-border/30 bg-main px-3 py-1.5 text-sm font-heading text-main-foreground shadow-sm transition-opacity hover:opacity-80"
           >
             Back to Projects
