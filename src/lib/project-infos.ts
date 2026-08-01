@@ -27,7 +27,7 @@ const projectInfos: ProjectInfo[] = [
     title: "JS Gaming",
     description:
       "Modpacks, resource packs, and technical tooling for Minecraft ecosystems.",
-    tags: ["Part of HMLabs", "Java", "Game Tooling", "Design"],
+    tags: ["Java", "Game Tooling", "Design"],
     links: [
       {
         label: "Modrinth",
@@ -71,7 +71,7 @@ const projectInfos: ProjectInfo[] = [
     title: "Awesome AI for Beginners",
     description:
       "A curated list of resources for learning artificial intelligence.",
-    tags: ["Part of HMLabs", "AI", "Awesome List"],
+    tags: ["AI", "Awesome List"],
     links: [
       {
         label: "Repository",
