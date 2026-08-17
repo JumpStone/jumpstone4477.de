@@ -69,7 +69,7 @@ export default function Page() {
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-0 md:px-8 md:pb-0">
       <section className="mb-8 rounded-base border border-border/30 bg-main p-6 text-main-foreground shadow-sm md:p-8">
         <h1 className="mb-3 text-3xl font-heading leading-tight sm:text-5xl">
-          Hi, I&apos;m <span className="text-foreground">Henry Max</span>.
+          Hi, I&apos;m <span className="text-foreground">Henry</span>.
         </h1>
         <p className="max-w-2xl text-base leading-relaxed">
           Young self-taught software developer & hardware enthusiast from
@@ -117,7 +117,10 @@ export default function Page() {
         <div className="mt-6 space-y-8 text-foreground">
           <div>
             <h3 className="mb-4 text-xl font-bold">Currently learning</h3>
-            <SkillIcons icons="js,ts,githubactions" label="Currently learning" />
+            <SkillIcons
+              icons="js,ts,githubactions"
+              label="Currently learning"
+            />
           </div>
 
           <div>
