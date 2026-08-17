@@ -51,21 +51,7 @@ const projectInfos: ProjectInfo[] = [
     priority: 1,
     publishedAt: "2025-10-25",
   },
-  {
-    slug: "link-shortener",
-    title: "Link Shortener",
-    description:
-      "A private URL shortener built with JavaScript and deployed on Cloudflare Workers.",
-    tags: ["JavaScript", "Cloudflare Workers"],
-    links: [
-      {
-        label: "Repository",
-        href: "https://github.com/henrymmey/link-shortener",
-      },
-    ],
-    priority: 4,
-    publishedAt: "2026-04-01",
-  },
+
   {
     slug: "awesome-ai-for-beginners",
     title: "Awesome AI for Beginners",
