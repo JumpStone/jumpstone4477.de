@@ -24,16 +24,18 @@ type ProjectSortOptions = {
 const projectInfos: ProjectInfo[] = [
   {
     slug: "js-gaming",
-    title: "JS Gaming",
-    description:
-      "Modpacks, resource packs, and technical tooling for Minecraft ecosystems.",
-    tags: ["Java", "Game Tooling", "Design"],
+    title: "HM Gaming",
+    description: "Modpacks, resource packs, and mods for Minecraft.",
+    tags: ["Java", "Design"],
     links: [
       {
-        label: "Modrinth",
-        href: "https://modrinth.com/organization/jumpstone-gaming",
+        label: "Website",
+        href: "/gaming",
       },
-      { label: "GitHub", href: "https://github.com/jumpstone-gaming" },
+      {
+        label: "Modrinth",
+        href: "https://modrinth.com/user/Fg5L4UzB",
+      },
     ],
     priority: 3,
     publishedAt: "2026-03-09",
