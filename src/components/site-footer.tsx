@@ -72,6 +72,23 @@ export default async function SiteFooter() {
                 {isSubsiteDomain ? (
                   <a
                     className="underline underline-offset-2"
+                    href={toMainDomain("/gaming")}
+                  >
+                    HM Gaming
+                  </a>
+                ) : (
+                  <Link
+                    className="underline underline-offset-2"
+                    href={toMainDomain("/gaming")}
+                  >
+                    HM Gaming
+                  </Link>
+                )}
+              </li>
+              <li>
+                {isSubsiteDomain ? (
+                  <a
+                    className="underline underline-offset-2"
                     href={toMainDomain("/links")}
                   >
                     Links
@@ -206,15 +223,6 @@ export default async function SiteFooter() {
                   target="_blank"
                 >
                   Modrinth
-                </a>
-              </li>
-              <li>
-                <a
-                  className="underline underline-offset-2"
-                  href="https://discord.gg/YWc9qb8TRP"
-                  target="_blank"
-                >
-                  Discord (Server)
                 </a>
               </li>
             </ul>
