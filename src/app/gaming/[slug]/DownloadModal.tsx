@@ -3,6 +3,12 @@
 import { useState } from "react";
 import { Download, X, Calendar } from "lucide-react";
 import type { ModrinthVersion } from "@/lib/modrinth";
+import type { Platform } from "@/lib/gaming/versions";
+
+const PLATFORM_COLORS: Record<Platform, string> = {
+  modrinth: "bg-[#00af5c]",
+  curseforge: "bg-[#f16436]",
+};
 
 function VersionBadge({ type }: { type: string }) {
   const styles: Record<string, string> = {
@@ -36,9 +42,11 @@ function formatDate(dateStr: string): string {
 export default function DownloadModal({
   versions,
   projectType,
+  platform,
 }: {
   versions: ModrinthVersion[];
   projectType: string;
+  platform: Platform;
 }) {
   const [open, setOpen] = useState(false);
   const [selectedGameVersion, setSelectedGameVersion] = useState("");
@@ -84,7 +92,7 @@ export default function DownloadModal({
     <>
       <button
         onClick={handleOpen}
-        className="inline-flex items-center gap-2 rounded-base border border-border/30 bg-emerald-600 px-3 py-1.5 text-sm font-heading text-white shadow-sm transition-opacity hover:opacity-80"
+        className={`inline-flex items-center gap-2 rounded-base border border-border/30 px-3 py-1.5 text-sm font-heading text-white shadow-sm transition-opacity hover:opacity-80 ${PLATFORM_COLORS[platform]}`}
       >
         <Download className="size-4" />
         Download
@@ -194,7 +202,7 @@ export default function DownloadModal({
                             href={file.url}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex shrink-0 items-center gap-1 rounded-base bg-emerald-600 px-3 py-1.5 text-xs font-heading text-white shadow-sm transition-opacity hover:opacity-80"
+                            className={`inline-flex shrink-0 items-center gap-1 rounded-base px-3 py-1.5 text-xs font-heading text-white shadow-sm transition-opacity hover:opacity-80 ${PLATFORM_COLORS[platform]}`}
                           >
                             <Download className="size-3.5" />
                           </a>

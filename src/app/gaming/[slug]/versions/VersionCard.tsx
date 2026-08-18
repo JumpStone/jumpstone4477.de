@@ -2,22 +2,51 @@
 
 import { Download, Calendar } from "lucide-react";
 import type { ModrinthVersion } from "@/lib/modrinth";
+import type { Platform } from "@/lib/gaming/versions";
+
+const PLATFORM_COLORS: Record<Platform, string> = {
+  modrinth: "bg-[#00af5c]",
+  curseforge: "bg-[#f16436]",
+};
+
+function getVersionUrl(
+  projectType: string,
+  projectSlug: string,
+  versionNumber: string,
+  platform: Platform
+): string {
+  if (platform === "curseforge") {
+    const paths: Record<string, string> = {
+      modpack: "modpacks",
+      resourcepack: "texture-packs",
+      mod: "mc-mods",
+      shader: "shaders",
+      plugin: "bukkit-plugins",
+      datapack: "mc-mods",
+    };
+    const path = paths[projectType] ?? "mc-mods";
+    return `https://www.curseforge.com/minecraft/${path}/${projectSlug}/files`;
+  }
+  return `https://modrinth.com/${projectType}/${projectSlug}/version/${versionNumber}`;
+}
 
 export default function VersionCard({
   version,
   projectType,
   projectSlug,
+  platform,
 }: {
   version: ModrinthVersion;
   projectType: string;
   projectSlug: string;
+  platform: Platform;
 }) {
   const v = version;
   const primaryFile = v.files.find((f) => f.primary) ?? v.files[0];
 
   return (
     <a
-      href={`https://modrinth.com/${projectType}/${projectSlug}/version/${v.version_number}`}
+      href={getVersionUrl(projectType, projectSlug, v.version_number, platform)}
       target="_blank"
       rel="noreferrer"
       className="block rounded-base border border-border/30 bg-secondary-background p-4 transition-opacity hover:opacity-80"
@@ -54,7 +83,7 @@ export default function VersionCard({
               e.stopPropagation();
               window.open(primaryFile.url, "_blank");
             }}
-            className="ml-auto inline-flex cursor-pointer items-center gap-1.5 rounded-base border border-border/30 bg-emerald-600 px-3 py-1 text-xs font-heading text-white shadow-sm transition-opacity hover:opacity-80"
+            className={`ml-auto inline-flex cursor-pointer items-center gap-1.5 rounded-base border border-border/30 px-3 py-1 text-xs font-heading text-white shadow-sm transition-opacity hover:opacity-80 ${PLATFORM_COLORS[platform]}`}
           >
             <Download className="size-3" />
             Download

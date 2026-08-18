@@ -1,0 +1,27 @@
+[
+  {
+    "filename": "totem.png",
+    "title": "Totem counter",
+    "description": ""
+  },
+  {
+    "filename": "potions.png",
+    "title": "Potion counter",
+    "description": ""
+  },
+  {
+    "filename": "armor.png",
+    "title": "Armor status",
+    "description": ""
+  },
+  {
+    "filename": "crosshair1.png",
+    "title": "Crosshair 1",
+    "description": ""
+  },
+  {
+    "filename": "crosshair2.png",
+    "title": "Crosshair 2",
+    "description": ""
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "name": "JS Green Diamond Ore",
+    "slug": "js-green-diamond-ore",
+    "type": "resourcepack",
+    "shortDescription": "This resource pack replaces the texture of the diamond oreblock with a fully green version.",
+    "modrinthId": "Y1SwGfzf",
+    "curseforgeId": null,
+    "enableModrinth": true,
+    "enableCurseforge": false,
+    "downloadsMode": "modrinth"
+  },
+  {
+    "name": "JS Green Ancient Debris Ore",
+    "slug": "js-green-ancient-debris-ore",
+    "type": "resourcepack",
+    "shortDescription": "This resource pack replaces the texture of the Ancient Debris block with a fully green version.",
+    "modrinthId": "iAWlZOx4",
+    "curseforgeId": null,
+    "enableModrinth": true,
+    "enableCurseforge": false,
+    "downloadsMode": "modrinth"
+  },
+  {
+    "name": "JS Combat Pro",
+    "slug": "js-combat-pro",
+    "type": "modpack",
+    "shortDescription": "A lightweight, optimized PvP modpack. For everyone who wants to be better.",
+    "modrinthId": "Dzmlr2F5",
+    "curseforgeId": null,
+    "enableModrinth": true,
+    "enableCurseforge": false,
+    "downloadsMode": "modrinth"
+  },
+  {
+    "name": "JS Green Redstone Ore",
+    "slug": "js-green-redstone-ore",
+    "type": "resourcepack",
+    "shortDescription": "This resource pack replaces the texture of the redstoneore block with a fully green version.",
+    "modrinthId": "OGW3adGA",
+    "curseforgeId": null,
+    "enableModrinth": true,
+    "enableCurseforge": false,
+    "downloadsMode": "modrinth"
+  },
+  {
+    "name": "JS Green Iron Ore",
+    "slug": "js-green-iron-ore",
+    "type": "resourcepack",
+    "shortDescription": "This resource pack replaces the texture of the iron ore block with a fully green version.",
+    "modrinthId": "5MAxfr8R",
+    "curseforgeId": null,
+    "enableModrinth": true,
+    "enableCurseforge": false,
+    "downloadsMode": "modrinth"
+  },
+  {
+    "name": "JS Removed Crosshair",
+    "slug": "js-removed-crosshair",
+    "type": "resourcepack",
+    "shortDescription": "This Pack will remove the Crosshair of your Minecraft.",
+    "modrinthId": "lbBrGYD8",
+    "curseforgeId": null,
+    "enableModrinth": true,
+    "enableCurseforge": false,
+    "downloadsMode": "modrinth"
+  },
+  {
+    "name": "HM Basic Play",
+    "slug": "hm-basic-play",
+    "type": "modpack",
+    "shortDescription": "A lightweight, small optimized daily driver modpack. For everyone and daily use.",
+    "modrinthId": "kUYTdD3h",
+    "curseforgeId": 1352468,
+    "enableModrinth": true,
+    "enableCurseforge": false,
+    "downloadsMode": "sum"
+  },
+  {
+    "name": "HM Life+",
+    "slug": "hm-lifep",
+    "type": "modpack",
+    "shortDescription": "A modpack for basic survival let's plays, featuring vanilla improvements, tweaks, and more.",
+    "modrinthId": "mqGoJZwG",
+    "curseforgeId": null,
+    "enableModrinth": true,
+    "enableCurseforge": false,
+    "downloadsMode": "modrinth"
+  },
+  {
+    "name": "JS Performance Core",
+    "slug": "js-performance-core",
+    "type": "modpack",
+    "shortDescription": "A lightweight, optimized performance modpack. Maximum FPS, minimum footprint. No fluff, just speed.",
+    "modrinthId": "cCaeW13E",
+    "curseforgeId": null,
+    "enableModrinth": true,
+    "enableCurseforge": false,
+    "downloadsMode": "modrinth"
+  }
+]

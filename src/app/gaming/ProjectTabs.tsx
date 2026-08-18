@@ -3,15 +3,41 @@
 import { ArrowUpRight, Download, Users } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
-import type { ModrinthProject } from "@/lib/modrinth";
+import type {
+  GamingProjectConfig,
+  ProjectStats,
+  ProjectType,
+} from "@/lib/gaming/types";
 
-type Tab = "all" | "modpack" | "resourcepack";
+type Tab = "all" | ProjectType;
 
 const TABS: { key: Tab; label: string }[] = [
   { key: "all", label: "All" },
   { key: "modpack", label: "Modpacks" },
   { key: "resourcepack", label: "Resource Packs" },
+  { key: "mod", label: "Mods" },
+  { key: "shader", label: "Shaders" },
+  { key: "plugin", label: "Plugins" },
+  { key: "datapack", label: "Datapacks" },
 ];
+
+const TYPE_BADGE_STYLES: Record<ProjectType, string> = {
+  modpack: "bg-blue-500/15 text-blue-700 dark:text-blue-400",
+  resourcepack: "bg-purple-500/15 text-purple-700 dark:text-purple-400",
+  mod: "bg-emerald-600/15 text-emerald-700 dark:text-emerald-400",
+  shader: "bg-amber-500/15 text-amber-700 dark:text-amber-400",
+  plugin: "bg-cyan-500/15 text-cyan-700 dark:text-cyan-400",
+  datapack: "bg-rose-500/15 text-rose-700 dark:text-rose-400",
+};
+
+const TYPE_LABELS: Record<ProjectType, string> = {
+  modpack: "Modpack",
+  resourcepack: "Resource Pack",
+  mod: "Mod",
+  shader: "Shader",
+  plugin: "Plugin",
+  datapack: "Datapack",
+};
 
 function formatCount(n: number): string {
   if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
@@ -22,14 +48,14 @@ function formatCount(n: number): string {
 export default function ProjectTabs({
   projects,
 }: {
-  projects: ModrinthProject[];
+  projects: (GamingProjectConfig & { stats: ProjectStats })[];
 }) {
   const [activeTab, setActiveTab] = useState<Tab>("all");
 
   const filtered = (activeTab === "all"
     ? projects
-    : projects.filter((p) => p.project_type === activeTab)
-  ).sort((a, b) => b.downloads - a.downloads);
+    : projects.filter((p) => p.type === activeTab)
+  ).sort((a, b) => b.stats.downloads - a.stats.downloads);
 
   return (
     <div>
@@ -62,55 +88,39 @@ export default function ProjectTabs({
               className="group rounded-base border border-border/30 bg-secondary-background p-5 shadow-sm transition-colors"
             >
               <div className="mb-3 flex items-start gap-4">
-                {project.icon_url ? (
-                  <img
-                    src={project.icon_url}
-                    alt={`${project.title} icon`}
-                    className="size-12 rounded-base object-cover"
-                  />
-                ) : (
-                  <div className="flex size-12 items-center justify-center rounded-base bg-emerald-600/20 text-lg font-heading text-emerald-400">
-                    {project.title.charAt(0)}
-                  </div>
-                )}
+                <img
+                  src={`/gaming/projects/${project.slug}/icon.png`}
+                  alt={`${project.name} icon`}
+                  className="size-12 rounded-base object-cover"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                  }}
+                />
                 <div className="min-w-0 flex-1">
                   <h3 className="truncate text-lg font-heading">
-                    {project.title}
+                    {project.name}
                     <ArrowUpRight className="ml-1.5 inline size-4 opacity-0 transition-opacity group-hover:opacity-50" />
                   </h3>
-                  <span className="rounded-full bg-emerald-600/15 px-2 py-0.5 text-xs font-heading text-emerald-400">
-                    {project.project_type === "modpack"
-                      ? "Modpack"
-                      : "Resource Pack"}
+                  <span
+                    className={`rounded-full px-2 py-0.5 text-xs font-heading ${TYPE_BADGE_STYLES[project.type]}`}
+                  >
+                    {TYPE_LABELS[project.type]}
                   </span>
                 </div>
               </div>
 
               <p className="mb-4 line-clamp-2 text-sm leading-relaxed text-foreground/70">
-                {project.description}
+                {project.shortDescription}
               </p>
-
-              {project.categories.length > 0 && (
-                <div className="mb-4 flex flex-wrap gap-1.5">
-                  {project.categories.slice(0, 3).map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-background px-2 py-0.5 text-xs text-foreground/60"
-                    >
-                      {tag.charAt(0).toUpperCase() + tag.slice(1)}
-                    </span>
-                  ))}
-                </div>
-              )}
 
               <div className="flex items-center gap-4 text-xs text-emerald-700 dark:text-emerald-400">
                 <span className="inline-flex items-center gap-1">
                   <Download className="size-3.5" />
-                  {formatCount(project.downloads)}
+                  {formatCount(project.stats.downloads)}
                 </span>
                 <span className="inline-flex items-center gap-1">
                   <Users className="size-3.5" />
-                  {formatCount(project.followers)}
+                  {formatCount(project.stats.followers)}
                 </span>
               </div>
             </Link>

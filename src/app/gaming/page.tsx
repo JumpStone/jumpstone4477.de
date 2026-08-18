@@ -1,5 +1,6 @@
 import SiteFooter from "@/components/site-footer";
-import { getProjects } from "@/lib/modrinth";
+import { getAllProjects } from "@/lib/gaming/local";
+import { getAllProjectStats } from "@/lib/gaming/downloads";
 import type { Metadata } from "next";
 import ProjectTabs from "./ProjectTabs";
 
@@ -12,7 +13,13 @@ export const metadata: Metadata = {
 };
 
 export default async function GamingPage() {
-  const projects = await getProjects();
+  const projects = getAllProjects();
+  const statsMap = await getAllProjectStats();
+
+  const projectsWithStats = projects.map((project) => ({
+    ...project,
+    stats: statsMap.get(project.slug) ?? { downloads: 0, followers: 0 },
+  }));
 
   return (
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-0 md:px-8 md:pb-0">
@@ -28,7 +35,7 @@ export default async function GamingPage() {
 
       <section className="mb-8 rounded-base border border-border/30 bg-secondary-background p-6 shadow-sm md:p-8">
         <h2 className="mb-4 text-xl font-heading">Projects</h2>
-        <ProjectTabs projects={projects} />
+        <ProjectTabs projects={projectsWithStats} />
       </section>
 
       <p className="mb-8 text-center text-sm text-foreground/40">

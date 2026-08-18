@@ -1,5 +1,7 @@
 import SiteFooter from "@/components/site-footer";
-import { getProject, getProjectVersions } from "@/lib/modrinth";
+import { getProjectBySlug, getProjectDescription, getProjectGallery } from "@/lib/gaming/local";
+import { getProjectStats } from "@/lib/gaming/downloads";
+import { getVersionsForPlatform } from "@/lib/gaming/versions";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProjectHeader from "./ProjectHeader";
@@ -12,45 +14,61 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
-  try {
-    const project = await getProject(slug);
-    return {
-      title: { absolute: `${project.title} | HenryMM` },
-      description: project.description,
-    };
-  } catch {
+  if (!project) {
     return {
       title: "Project Not Found",
       description: "The requested project could not be found.",
     };
   }
+
+  return {
+    title: { absolute: `${project.name} | HenryMM` },
+    description: project.shortDescription,
+  };
 }
 
 export default async function GamingProjectPage({ params }: Props) {
   const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
-  let project;
-  try {
-    project = await getProject(slug);
-  } catch {
+  if (!project) {
     notFound();
   }
 
-  const versions = await getProjectVersions(project.id);
+  const [description, stats, modrinthVersions, curseforgeVersions, gallery] =
+    await Promise.all([
+      getProjectDescription(slug),
+      getProjectStats(project),
+      project.enableModrinth
+        ? getVersionsForPlatform(project, "modrinth")
+        : Promise.resolve([]),
+      project.enableCurseforge
+        ? getVersionsForPlatform(project, "curseforge")
+        : Promise.resolve([]),
+      getProjectGallery(slug),
+    ]);
+
+  const hasGallery = gallery.length > 0;
 
   const tabs = [
     { key: "description", label: "Description" },
-    { key: "gallery", label: "Gallery", hide: !project.gallery?.length },
+    { key: "gallery", label: "Gallery", hide: !hasGallery },
     { key: "versions", label: "Versions" },
   ];
 
   return (
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-0 md:px-8 md:pb-0">
-      <ProjectHeader project={project} versions={versions} />
+      <ProjectHeader
+        project={project}
+        stats={stats}
+        modrinthVersions={modrinthVersions}
+        curseforgeVersions={curseforgeVersions}
+      />
       <section className="mb-8 rounded-base border border-border/30 bg-main p-6 text-main-foreground shadow-sm md:p-8">
         <TabNav tabs={tabs} slug={project.slug} />
-        <ProjectBody body={project.body} />
+        <ProjectBody body={description} />
       </section>
 
       <p className="mb-8 text-center text-sm text-foreground/40">

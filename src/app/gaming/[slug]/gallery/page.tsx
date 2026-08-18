@@ -1,5 +1,9 @@
 import SiteFooter from "@/components/site-footer";
-import { getProject, getProjectVersions } from "@/lib/modrinth";
+import {
+  getProjectBySlug,
+  getProjectGallery,
+} from "@/lib/gaming/local";
+import { getProjectStats } from "@/lib/gaming/downloads";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import ProjectHeader from "../ProjectHeader";
@@ -11,57 +15,60 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
-  try {
-    const project = await getProject(slug);
-    return {
-      title: { absolute: `${project.title} - Gallery | HenryMM` },
-      description: project.description,
-    };
-  } catch {
+  if (!project) {
     return {
       title: "Project Not Found",
       description: "The requested project could not be found.",
     };
   }
+
+  return {
+    title: { absolute: `${project.name} - Gallery | HenryMM` },
+    description: project.shortDescription,
+  };
 }
 
 export default async function GalleryPage({ params }: Props) {
   const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
-  let project;
-  try {
-    project = await getProject(slug);
-  } catch {
+  if (!project) {
     notFound();
   }
 
-  const versions = await getProjectVersions(project.id);
+  const [gallery, stats] = await Promise.all([
+    getProjectGallery(slug),
+    getProjectStats(project),
+  ]);
+
+  const hasGallery = gallery.length > 0;
 
   const tabs = [
     { key: "description", label: "Description" },
-    { key: "gallery", label: "Gallery", hide: !project.gallery?.length },
+    { key: "gallery", label: "Gallery", hide: !hasGallery },
     { key: "versions", label: "Versions" },
   ];
 
   return (
     <main className="relative mx-auto w-full max-w-6xl px-4 pb-0 md:px-8 md:pb-0">
-      <ProjectHeader project={project} versions={versions} />
+      <ProjectHeader project={project} stats={stats} />
       <section className="mb-8 rounded-base border border-border/30 bg-main p-6 text-main-foreground shadow-sm md:p-8">
         <TabNav tabs={tabs} slug={project.slug} />
 
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {(project.gallery ?? []).map((img) => (
+          {gallery.map((img) => (
             <a
-              key={img.url}
-              href={img.url}
+              key={img.filename}
+              href={`/gaming/projects/${slug}/${img.filename}`}
               target="_blank"
               rel="noreferrer"
               className="group block overflow-hidden rounded-base border border-border/30 bg-secondary-background"
             >
               <img
-                src={img.url}
-                alt={img.title ?? "Gallery image"}
+                src={`/gaming/projects/${slug}/${img.filename}`}
+                alt={img.title || "Gallery image"}
                 className="aspect-video w-full object-cover transition-transform group-hover:scale-105"
               />
               {img.title && (

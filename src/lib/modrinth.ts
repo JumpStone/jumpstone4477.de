@@ -1,4 +1,5 @@
 export type ModrinthProject = {
+  id: string;
   slug: string;
   title: string;
   description: string;
@@ -52,31 +53,11 @@ export type ModrinthVersion = {
   }[];
 };
 
-const MODRINTH_USER_ID = "Fg5L4UzB";
-
 const HEADERS: HeadersInit = {
   "User-Agent": "henrymeyer-website/1.0",
 };
 
 const REVALIDATE = 3600;
-
-export async function getProjects(): Promise<ModrinthProject[]> {
-  const res = await fetch(
-    `https://api.modrinth.com/v2/user/${MODRINTH_USER_ID}/projects`,
-    {
-      headers: HEADERS,
-      next: { revalidate: REVALIDATE },
-    }
-  );
-
-  if (!res.ok) {
-    throw new Error(
-      `Failed to fetch Modrinth projects: ${res.status} ${res.statusText}`
-    );
-  }
-
-  return res.json();
-}
 
 export async function getProject(
   slugOrId: string

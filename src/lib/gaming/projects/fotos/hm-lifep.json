@@ -1,0 +1,27 @@
+[
+  {
+    "filename": "map.png",
+    "title": "Map",
+    "description": "Xaero's World Map"
+  },
+  {
+    "filename": "freecam.png",
+    "title": "Freecam",
+    "description": ""
+  },
+  {
+    "filename": "tweaks.png",
+    "title": "Tweaks",
+    "description": "Crafting Tweaks"
+  },
+  {
+    "filename": "shader.png",
+    "title": "Shaders",
+    "description": "Complementary Reimagined shaders"
+  },
+  {
+    "filename": "connected-textures.png",
+    "title": "Connected textures",
+    "description": "Continuity"
+  }
+]
