@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@repo/ui";
 import GitHubStats from "@/components/github-section";
 import HackatimeStats from "@/components/hackatime-stats";
 import SectionHeading from "@/components/section-heading";

@@ -1,5 +1,5 @@
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
+import { Alert, AlertDescription, AlertTitle } from "@repo/ui";
+import { Badge } from "@repo/ui";
 import SectionHeading from "@/components/section-heading";
 import { getGitHubData } from "@/lib/github";
 import { ArrowUpRight, FolderGit2, Star } from "lucide-react";

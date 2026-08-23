@@ -1,6 +1,6 @@
 import SectionHeading from "@/components/section-heading";
 import SiteFooter from "@/components/site-footer";
-import { Badge } from "@/components/ui/badge";
+import { Badge } from "@repo/ui";
 import {
   getSubsiteProjects,
   type SubsiteProject,
