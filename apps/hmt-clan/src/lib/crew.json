@@ -1,0 +1,86 @@
+[
+  {
+    "name": "JumpStone4477",
+    "rolle": "Gründer",
+    "minecraftUser": "JumpStone4477",
+    "useskin": true,
+    "priority": 1
+  },
+  {
+    "name": "SchildFlieger",
+    "rolle": "Gründer",
+    "minecraftUser": "SchildFlieger",
+    "useskin": true,
+    "priority": 2
+  },
+  {
+    "name": "Netheriteman115",
+    "rolle": "Spieler",
+    "minecraftUser": "Netheriteman115",
+    "useskin": true,
+    "priority": 3
+  },
+  {
+    "name": "Thies_OG",
+    "rolle": "Spieler",
+    "minecraftUser": "Thies_OG",
+    "useskin": true,
+    "priority": 4
+  },
+  {
+    "name": "D1909",
+    "rolle": "Spieler",
+    "minecraftUser": "D1909",
+    "useskin": true,
+    "priority": 5
+  },
+  {
+    "name": ".Antxn11756",
+    "rolle": "Spieler",
+    "minecraftUser": "Antxn11756",
+    "useskin": false,
+    "priority": 6
+  },
+  {
+    "name": "JB130987",
+    "rolle": "Spieler",
+    "minecraftUser": "JB130987",
+    "useskin": true,
+    "priority": 7
+  },
+  {
+    "name": "Niklas",
+    "rolle": "Spieler",
+    "minecraftUser": "Niklas",
+    "useskin": false,
+    "priority": 8
+  },
+  {
+    "name": "Joshua",
+    "rolle": "Spieler",
+    "minecraftUser": "Joshua",
+    "useskin": false,
+    "priority": 9
+  },
+  {
+    "name": "Tom",
+    "rolle": "Spieler",
+    "minecraftUser": "Tom",
+    "useskin": false,
+    "priority": 10
+  },
+  {
+    "name": "Fischfarmer ?",
+    "rolle": "Spieler",
+    "minecraftUser": "Fischfarmer",
+    "useskin": true,
+    "priority": 11
+  },
+  {
+    "name": "Temp3zt ?",
+    "rolle": "Spieler",
+    "minecraftUser": "Temp3zt",
+    "useskin": true,
+    "priority": 12
+  }
+]

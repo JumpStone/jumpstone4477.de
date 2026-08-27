@@ -7,7 +7,8 @@ Monorepo for [henrymeyer.de](https://henrymeyer.de), managed with [pnpm](https:/
 ```
 .
 ├── apps/
-│   └── main-site/   # Next.js web application
+│   ├── main-site/   # Next.js web application
+│   └── hmt-clan/    # Next.js web application (uses @repo/ui)
 └── packages/
     └── ui/          # Shared UI components (@repo/ui)
 ```
@@ -28,6 +29,12 @@ pnpm dev:main
 
 # Build the main site
 pnpm build:main
+
+# Start the hmt-clan site in development mode
+pnpm dev:hmt-clan
+
+# Build the hmt-clan site
+pnpm build:hmt-clan
 ```
 
 You can also run commands scoped to a specific workspace package:
