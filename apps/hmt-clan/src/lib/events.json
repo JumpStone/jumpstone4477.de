@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Example Event",
+    "slug": "example-event",
+    "description": "Description of Example Event.",
+    "priority": 1,
+    "date": "2026-01-01",
+    "time": "19:00",
+    "showTime": true,
+    "show": false,
+    "showDetailsButton": true,
+    "done": false,
+    "links": [
+      {
+        "displayName": "Example",
+        "url": "https://example.com"
+      }
+    ]
+  }
+]
