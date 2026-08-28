@@ -12,11 +12,13 @@ export default function SiteFooter() {
                 </a>
               </li>
               <li>
-                <a
-                  className="underline underline-offset-2"
-                  href="https://henrymeyer.de/contact"
-                >
-                  Contact
+                <a className="underline underline-offset-2" href="/events">
+                  Events
+                </a>
+              </li>
+              <li>
+                <a className="underline underline-offset-2" href="/contact">
+                  Kontakt
                 </a>
               </li>
             </ul>
@@ -30,23 +32,15 @@ export default function SiteFooter() {
                   className="underline underline-offset-2"
                   href="https://henrymeyer.de/legal/imprint"
                 >
-                  Imprint
+                  Impressum
                 </a>
               </li>
               <li>
                 <a
                   className="underline underline-offset-2"
-                  href="https://henrymeyer.de/legal/privacy"
+                  href="/legal/privacy"
                 >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  className="underline underline-offset-2"
-                  href="https://henrymeyer.de/code-of-conduct"
-                >
-                  Code of Conduct
+                  Datenschutz
                 </a>
               </li>
             </ul>
@@ -58,7 +52,7 @@ export default function SiteFooter() {
           <p>
             Based on{" "}
             <a
-              href="https://henrymeyer.de/?utm_source=akkucraft.de&utm_medium=copyright_notice&utm_campaign=website"
+              href="https://henrymeyer.de/"
               target="_blank"
               className="underline underline-offset-2 hover:opacity-80 transition-opacity"
             >
