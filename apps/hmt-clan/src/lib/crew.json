@@ -75,12 +75,5 @@
     "minecraftUser": "Fischfarmer",
     "useskin": true,
     "priority": 11
-  },
-  {
-    "name": "Temp3zt ?",
-    "rolle": "Spieler",
-    "minecraftUser": "Temp3zt",
-    "useskin": true,
-    "priority": 12
   }
 ]
