@@ -63,10 +63,10 @@
     "priority": 9
   },
   {
-    "name": "Tom",
+    "name": "eyoTom",
     "rolle": "Spieler",
-    "minecraftUser": "Tom",
-    "useskin": false,
+    "minecraftUser": "eyoTom",
+    "useskin": true,
     "priority": 10
   },
   {
