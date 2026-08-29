@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import SiteChrome from "@/components/site-chrome";
+import { ConsentProvider } from "@/components/consent-provider";
+import ConsentDialog from "@/components/consent-dialog";
+import CookieBanner from "@/components/cookie-banner";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -40,9 +43,14 @@ export default function RootLayout({
     >
       <head />
       <body className="min-h-full flex flex-col">
-        <SiteChrome />
+        <ConsentProvider>
+          <SiteChrome />
 
-        {children}
+          {children}
+
+          <CookieBanner />
+          <ConsentDialog />
+        </ConsentProvider>
       </body>
     </html>
   );

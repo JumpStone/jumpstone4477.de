@@ -1,4 +1,10 @@
+"use client";
+
+import { useConsent } from "@/components/consent-provider";
+
 export default function SiteFooter() {
+  const { openDialog } = useConsent();
+
   return (
     <footer className="mt-8 border-t border-border/30 bg-secondary-background ml-[calc(50%-50vw)] mr-[calc(50%-50vw)]">
       <div className="mx-auto w-full max-w-6xl px-4 py-6 md:px-8">
@@ -42,6 +48,15 @@ export default function SiteFooter() {
                 >
                   Datenschutz
                 </a>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={openDialog}
+                  className="underline underline-offset-2 hover:opacity-80"
+                >
+                  Cookie-Einstellungen
+                </button>
               </li>
             </ul>
           </div>
