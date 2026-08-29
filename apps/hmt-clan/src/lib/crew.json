@@ -75,5 +75,12 @@
     "minecraftUser": "Fischfarmer",
     "useskin": true,
     "priority": 11
+  },
+  {
+    "name": "BenjiX ?",
+    "rolle": "Spieler",
+    "minecraftUser": "_BenjiX",
+    "useskin": true,
+    "priority": 12
   }
 ]
