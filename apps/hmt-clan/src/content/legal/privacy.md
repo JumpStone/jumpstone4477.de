@@ -32,7 +32,7 @@ Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft, Empfänger
 
 Diese Website verwendet keine klassischen Tracking-Cookies zu Werbezwecken. Es werden ausschließlich technisch notwendige Daten im lokalen Speicher Ihres Browsers (localStorage) abgelegt:
 
-- Einwilligungs-Status (Consent-Management): Speicherung Ihrer Entscheidung bezüglich externer Medien (z. B. Discord-Widget) unter dem Schlüssel hmt-clan:consent mit den Werten granted (zugestimmt) oder denied (abgelehnt). Dies verhindert, dass Sie bei jedem Aufruf erneut nach Ihrer Einwilligung gefragt werden.
+- Einwilligungs-Status (Consent-Management): Speicherung Ihrer Entscheidung bezüglich externer Medien (z. B. Discord-Widget, Google-Kalender) unter dem Schlüssel hmt-clan:consent mit den Werten granted (zugestimmt) oder denied (abgelehnt). Dies verhindert, dass Sie bei jedem Aufruf erneut nach Ihrer Einwilligung gefragt werden.
 
 Die Speicherung erfolgt auf Grundlage von § 25 Abs. 2 Nr. 2 TDDDG (technisch notwendig für das Bereitstellen der vom Nutzer ausdrücklich gewünschten Funktion bzw. Design- und Datenschutzeinstellung).
 
@@ -51,9 +51,18 @@ Das Widget ist standardmäßig deaktiviert. Erst wenn Sie über das Cookie-Banne
 - Rechtsgrundlage: Die Datenverarbeitung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gem. Art. 6 Abs. 1 lit. a DSGVO.
 - Widerruf der Einwilligung: Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern. Klicken Sie dazu im Fußbereich (Footer) dieser Website auf den Link „Cookie-Einstellungen“, um den Einstellungs-Dialog erneut zu öffnen und Ihre Auswahl anzupassen.
 
+### Google Kalender
+
+Auf dieser Website wird der Event-Kalender als eingebetteter Kalender des Dienstes Google Kalender (Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA) eingebunden. Der Kalender ist unter https://hmt-clan.vercel.app/calendar sowie auf der Startseite verfügbar.
+
+Der Kalender ist standardmäßig deaktiviert. Erst wenn Sie über das Cookie-Banner, die Einstellungen oder direkt am Platzhalter des Kalenders Ihre Einwilligung erteilen, wird die Verbindung zu den Servern von Google hergestellt und der Kalender geladen. Dabei werden personenbezogene Daten (insbesondere Ihre IP-Adresse sowie technische Browserdaten) an Google übertragen.
+
+- Rechtsgrundlage: Die Datenverarbeitung erfolgt ausschließlich auf Grundlage Ihrer Einwilligung gem. Art. 6 Abs. 1 lit. a DSGVO.
+- Widerruf der Einwilligung: Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen oder ändern. Klicken Sie dazu im Fußbereich (Footer) dieser Website auf den Link „Cookie-Einstellungen“, um den Einstellungs-Dialog erneut zu öffnen und Ihre Auswahl anzupassen.
+
 ## 6. Externe Links
 
-Diese Website enthält Links zu externen Plattformen wie Discord. Wenn Sie auf diese Links klicken, verlassen Sie diese Website und es gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
+Diese Website enthält Links zu externen Plattformen wie Discord oder Google Kalender. Wenn Sie auf diese Links klicken, verlassen Sie diese Website und es gelten die Datenschutzbestimmungen des jeweiligen Anbieters.
 
 ## Geltungsbereich
 

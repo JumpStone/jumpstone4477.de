@@ -1,6 +1,7 @@
 import SiteFooter from "@/components/site-footer";
 import EventCard from "@/components/event-card";
 import DiscordWidget from "@/components/discord-widget";
+import CalendarWidget from "@/components/calendar-widget";
 import crew from "@/lib/crew.json";
 import { getHomepageEvents } from "@/lib/events";
 
@@ -81,6 +82,13 @@ export default function Page() {
           Discord
         </h2>
         <DiscordWidget />
+      </section>
+
+      <section id="kalender" className="mb-8">
+        <h2 className="mb-6 text-2xl font-heading text-foreground sm:text-3xl">
+          Kalender
+        </h2>
+        <CalendarWidget />
       </section>
 
       <p className="mb-8 text-center text-sm text-foreground/40">
