@@ -61,14 +61,14 @@ export default function Page() {
           ))}
         </ul>
       </section>
-
+      {/*
       <section id="discord" className="mb-8">
         <h2 className="mb-6 text-2xl font-heading text-foreground sm:text-3xl">
           Discord
         </h2>
         <DiscordWidget />
       </section>
-
+      */}
       <section id="kalender" className="mb-8">
         <h2 className="mb-6 text-2xl font-heading text-foreground sm:text-3xl">
           Kalender
