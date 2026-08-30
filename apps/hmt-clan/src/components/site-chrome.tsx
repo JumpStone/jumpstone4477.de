@@ -27,6 +27,10 @@ function CalendarHeader() {
 export default function SiteChrome() {
   const pathname = usePathname();
 
+  if (pathname === "/calendar/full") {
+    return null;
+  }
+
   return (
     <>
       {pathname === "/calendar" ? (
