@@ -2,8 +2,11 @@ import SiteFooter from "@/components/site-footer";
 import EventCard from "@/components/event-card";
 import DiscordWidget from "@/components/discord-widget";
 import CalendarWidget from "@/components/calendar-widget";
-import crew from "@/lib/crew.json";
+import CrewCard from "@/components/crew-card";
+import { crew } from "@/lib/crew";
 import { getHomepageEvents } from "@/lib/events";
+
+export const dynamic = "force-dynamic";
 
 export default function Page() {
   const members = [...crew].sort((a, b) => a.priority - b.priority);
@@ -53,25 +56,7 @@ export default function Page() {
         <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
           {members.map((member) => (
             <li key={member.minecraftUser}>
-              <figure className="overflow-hidden rounded-base border border-border/30 bg-main font-base shadow-sm">
-                <img
-                  className="w-full aspect-3/4"
-                  src={
-                    member.useskin === false
-                      ? "/skins/blank.png"
-                      : `/skins/${member.minecraftUser}.png`
-                  }
-                  alt={`Skin von ${member.minecraftUser}`}
-                  width={600}
-                  height={800}
-                />
-                <figcaption className="border-t border-border/30 p-4 text-center">
-                  <p className="font-heading text-main-foreground">
-                    {member.name}
-                  </p>
-                  <p className="text-sm text-foreground/60">{member.rolle}</p>
-                </figcaption>
-              </figure>
+              <CrewCard member={member} />
             </li>
           ))}
         </ul>

@@ -79,14 +79,14 @@ export default function SiteHeader({
             aria-label="Primary"
             className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-4 whitespace-nowrap"
           >
-            <a
-              href="/#crew"
+            <Link
+              href="/crew"
               className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
                 isCompact ? "text-sm" : "text-base"
               }`}
             >
-              Members
-            </a>
+              Crew
+            </Link>
             <Link
               href="/events"
               className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${

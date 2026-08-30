@@ -4,83 +4,107 @@
     "rolle": "Gründer",
     "minecraftUser": "JumpStone4477",
     "useskin": true,
-    "priority": 1
+    "thescape_slug": "",
+    "priority": 1,
+    "slug": "jumpstone4477"
   },
   {
     "name": "SchildFlieger",
     "rolle": "Gründer",
     "minecraftUser": "SchildFlieger",
     "useskin": true,
-    "priority": 2
+    "thescape_slug": "",
+    "priority": 2,
+    "slug": "schildflieger"
   },
   {
     "name": "Netheriteman115",
     "rolle": "Spieler",
     "minecraftUser": "Netheriteman115",
     "useskin": true,
-    "priority": 3
+    "thescape_slug": "",
+    "priority": 3,
+    "slug": "netheriteman115"
   },
   {
     "name": "Thies_OG",
     "rolle": "Spieler",
     "minecraftUser": "Thies_OG",
     "useskin": true,
-    "priority": 4
+    "thescape_slug": "",
+    "priority": 4,
+    "slug": "thies_og"
   },
   {
     "name": "D1909",
     "rolle": "Spieler",
     "minecraftUser": "D1909",
     "useskin": true,
-    "priority": 5
+    "thescape_slug": "",
+    "priority": 5,
+    "slug": "d1909"
   },
   {
     "name": ".Antxn11756",
     "rolle": "Spieler",
     "minecraftUser": "Antxn11756",
     "useskin": false,
-    "priority": 6
+    "thescape_slug": "",
+    "priority": 6,
+    "slug": "antxn11756"
   },
   {
     "name": "JB130987",
     "rolle": "Spieler",
     "minecraftUser": "JB130987",
     "useskin": true,
-    "priority": 7
+    "thescape_slug": "",
+    "priority": 7,
+    "slug": "jb130987"
   },
   {
     "name": "Nikzo_45",
     "rolle": "Spieler",
     "minecraftUser": "Nikzo_45",
     "useskin": true,
-    "priority": 8
+    "thescape_slug": "",
+    "priority": 8,
+    "slug": "nikzo_45"
   },
   {
     "name": "Joshua",
     "rolle": "Spieler",
     "minecraftUser": "Joshua",
     "useskin": false,
-    "priority": 9
+    "thescape_slug": "",
+    "priority": 9,
+    "slug": "joshua"
   },
   {
     "name": "eyoTom",
     "rolle": "Spieler",
     "minecraftUser": "eyoTom",
     "useskin": true,
-    "priority": 10
+    "thescape_slug": "",
+    "priority": 10,
+    "slug": "eyotom"
   },
   {
     "name": "Fischfarmer ?",
     "rolle": "Spieler",
     "minecraftUser": "Fischfarmer",
     "useskin": true,
-    "priority": 11
+    "thescape_slug": "",
+    "priority": 11,
+    "slug": "fischfarmer"
   },
   {
-    "name": "BenjiX ?",
+    "name": "_BenjiX ?",
     "rolle": "Spieler",
     "minecraftUser": "_BenjiX",
     "useskin": true,
-    "priority": 12
+    "thescape_slug": "",
+    "priority": 12,
+    "slug": "_benjix"
   }
 ]
