@@ -6,7 +6,11 @@ import { useConsent } from "@/components/consent-provider";
 const CALENDAR_WIDGET_URL =
   "https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FBerlin&showPrint=0&showTz=0&mode=WEEK&src=MWUxNDA2MjRiMDQ2NTgyNzM2NDA4NjA2ODYyZmRmYTBlZDUwZjliODcyODFkYzY0ZDFmNzM3MWE3MzMxNWQ1ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%237986cb";
 
-export default function CalendarWidget({ className = "" }: { className?: string }) {
+export default function CalendarWidget({
+  className = "",
+}: {
+  className?: string;
+}) {
   const { snapshot, grant } = useConsent();
 
   return (
@@ -20,7 +24,6 @@ export default function CalendarWidget({ className = "" }: { className?: string 
           style={{ borderWidth: 0 }}
           width={800}
           height={600}
-          allowTransparency
           loading="lazy"
           className="h-full w-full border-0 invert-[0.9] hue-rotate-180"
         />
