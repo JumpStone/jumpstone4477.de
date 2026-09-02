@@ -75,6 +75,17 @@ export default function SiteFooter() {
             </a>
             .
           </p>
+          <p>
+            Developed with ❤ by{" "}
+            <a
+              href="https://henrymeyer.de/"
+              target="_blank"
+              className="underline underline-offset-2 hover:opacity-80 transition-opacity"
+            >
+              Henry Meyer.
+            </a>
+            .
+          </p>
         </div>
       </div>
     </footer>
