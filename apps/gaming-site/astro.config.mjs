@@ -1,26 +1,131 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
-			sidebar: [
-				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
-				},
-				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
-				},
-			],
-		}),
-	],
+  integrations: [
+    starlight({
+      title: "HenryMM Gaming",
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "https://github.com/henrymmey",
+        },
+        {
+          icon: "link",
+          label: "Modrinth",
+          href: "https://modrinth.com/user/henrymmey",
+        },
+        {
+          icon: "link",
+          label: "Curseforge",
+          href: "https://www.curseforge.com/members/henrymmey",
+        },
+      ],
+      sidebar: [
+        {
+          label: "Projects",
+          slug: "projects",
+        },
+        {
+          label: "Modpacks",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            {
+              label: "HM Basic Play",
+              collapsed: false,
+              items: [
+                {
+                  label: "Overview",
+                  slug: "projects/modpacks/hm-basic-play",
+                },
+                {
+                  label: "Installation",
+                  slug: "projects/modpacks/hm-basic-play/installation",
+                },
+              ],
+            },
+            {
+              label: "JS Combat Pro",
+              collapsed: false,
+              items: [
+                {
+                  label: "Overview",
+                  slug: "projects/modpacks/js-combat-pro",
+                },
+                {
+                  label: "Installation",
+                  slug: "projects/modpacks/js-combat-pro/installation",
+                },
+              ],
+            },
+            {
+              label: "HM Life+",
+              collapsed: true,
+              items: [
+                {
+                  label: "Overview",
+                  slug: "projects/modpacks/hm-lifep",
+                },
+                {
+                  label: "Installation",
+                  slug: "projects/modpacks/hm-lifep/installation",
+                },
+              ],
+            },
+            {
+              label: "JS Performance Core",
+              collapsed: true,
+              items: [
+                {
+                  label: "Overview",
+                  slug: "projects/modpacks/js-performance-core",
+                },
+                {
+                  label: "Installation",
+                  slug: "projects/modpacks/js-performance-core/installation",
+                },
+              ],
+            },
+            {
+              label: "HMT pack",
+              collapsed: true,
+              items: [
+                {
+                  label: "Overview",
+                  slug: "projects/modpacks/hmt-pack",
+                },
+                {
+                  label: "Installation",
+                  slug: "projects/modpacks/hmt-pack/installation",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          label: "Ressource Packs",
+          items: [
+            // Each item here is one entry in the navigation menu.
+            {
+              label: "JS Green Ores",
+              collapsed: false,
+              items: [
+                {
+                  label: "Overview",
+                  slug: "projects/ressourcepacks/js-green-ores",
+                },
+                {
+                  label: "Installation",
+                  slug: "projects/ressourcepacks/js-green-ores/installation",
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    }),
+  ],
 });
