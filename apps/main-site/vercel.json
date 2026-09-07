@@ -26,15 +26,5 @@
         }
       ]
     }
-  ],
-  "rewrites": [
-    {
-      "source": "/gaming",
-      "destination": "https://deine-gaming-site.vercel.app"
-    },
-    {
-      "source": "/gaming/:path*",
-      "destination": "https://deine-gaming-site.vercel.app/:path*"
-    }
   ]
 }
