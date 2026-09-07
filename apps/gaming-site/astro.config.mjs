@@ -123,6 +123,34 @@ export default defineConfig({
                 },
               ],
             },
+            {
+              label: "JS Cyan Ores",
+              collapsed: true,
+              items: [
+                {
+                  label: "Overview",
+                  slug: "projects/ressourcepacks/js-cyan-ores",
+                },
+                {
+                  label: "Installation",
+                  slug: "projects/ressourcepacks/js-cyan-ores/installation",
+                },
+              ],
+            },
+            {
+              label: "JS Removed Crosshair",
+              collapsed: true,
+              items: [
+                {
+                  label: "Overview",
+                  slug: "projects/ressourcepacks/js-removed-crosshair",
+                },
+                {
+                  label: "Installation",
+                  slug: "projects/ressourcepacks/js-removed-crosshair/installation",
+                },
+              ],
+            },
           ],
         },
       ],
