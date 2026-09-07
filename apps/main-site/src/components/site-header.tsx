@@ -104,7 +104,7 @@ export default function SiteHeader({
               Projects
             </a>
             <a
-              href="/gaming"
+              href="https://gaming.henrymeyer.de"
               className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
                 isCompact ? "text-sm" : "text-base"
               }`}

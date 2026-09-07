@@ -72,14 +72,14 @@ export default async function SiteFooter() {
                 {isSubsiteDomain ? (
                   <a
                     className="underline underline-offset-2"
-                    href={toMainDomain("/gaming")}
+                    href={toMainDomain("https://gaming.henrymeyer.de")}
                   >
                     HM Gaming
                   </a>
                 ) : (
                   <Link
                     className="underline underline-offset-2"
-                    href={toMainDomain("/gaming")}
+                    href={toMainDomain("https://gaming.henrymeyer.de")}
                   >
                     HM Gaming
                   </Link>

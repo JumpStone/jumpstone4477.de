@@ -30,7 +30,7 @@ const projectInfos: ProjectInfo[] = [
     links: [
       {
         label: "Website",
-        href: "/gaming",
+        href: "https://gaming.henrymeyer.de",
       },
       {
         label: "Modrinth",
