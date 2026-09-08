@@ -69,6 +69,10 @@ export default defineConfig({
                   label: "Installation",
                   slug: "projects/modpacks/js-combat-pro/installation",
                 },
+                {
+                  label: "Included Projects",
+                  slug: "projects/modpacks/js-combat-pro/included-projects",
+                },
               ],
             },
             {
