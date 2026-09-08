@@ -238,4 +238,6 @@ Confirm that the file exists in `public/` at the URL used by the site configurat
 
 Contributors are expected to communicate respectfully, assume good faith, and keep feedback focused on improving the project. Harassment, discrimination, and personal attacks are not acceptable.
 
-Thank you for taking the time to make the gaming documentation more useful for players and creators.
+See [henrymeyer.de/code-of-conduct](https://henrymeyer.de/code-of-conduct) for the full Code of Conduct.
+
+Thank you for taking the time to make the gaming documentation more useful for players.
