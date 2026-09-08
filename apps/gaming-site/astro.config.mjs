@@ -10,6 +10,7 @@ export default defineConfig({
       title: "HenryMM Gaming",
       favicon: "/favicon.ico",
       components: {
+        Footer: "./src/components/Footer.astro",
         PageTitle: "./src/components/PageTitle.astro",
       },
       social: [
