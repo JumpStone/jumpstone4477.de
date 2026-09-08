@@ -101,6 +101,10 @@ export default defineConfig({
                   label: "Installation",
                   slug: "projects/modpacks/js-performance-core/installation",
                 },
+                {
+                  label: "Included Projects",
+                  slug: "projects/modpacks/js-performance-core/included-projects",
+                },
               ],
             },
             {
