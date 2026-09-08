@@ -27,7 +27,7 @@ export default function CodeOfConductPage() {
         </h1>
         <p className="max-w-3xl text-sm leading-relaxed md:text-base">
           Community guidelines for respectful and inclusive interaction across
-          all JumpStone and JumpStone-Gaming project areas.
+          all my project areas.
         </p>
       </section>
 
@@ -35,12 +35,11 @@ export default function CodeOfConductPage() {
         <section className="mb-6 rounded-base border border-border/30 bg-background p-5 shadow-sm">
           <h2 className="mb-3 text-xl font-heading">Our Pledge</h2>
           <p className="text-sm leading-relaxed md:text-base">
-            I as the maintainer of all JumpStone and JumpStone-Gaming projects,
-            am committed to providing a friendly, safe, and welcoming
-            environment for all, regardless of level of experience, gender
-            identity and expression, sexual orientation, disability, personal
-            appearance, body size, race, ethnicity, age, religion, or
-            nationality.
+            I as the maintainer of all my projects, am committed to providing a
+            friendly, safe, and welcoming environment for all, regardless of
+            level of experience, gender identity and expression, sexual
+            orientation, disability, personal appearance, body size, race,
+            ethnicity, age, religion, or nationality.
           </p>
         </section>
 
