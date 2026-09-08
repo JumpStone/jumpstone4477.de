@@ -106,7 +106,7 @@ export default defineConfig({
           ],
         },
         {
-          label: "Ressource Packs",
+          label: "Resource Packs",
           items: [
             // Each item here is one entry in the navigation menu.
             {
@@ -115,11 +115,11 @@ export default defineConfig({
               items: [
                 {
                   label: "Overview",
-                  slug: "projects/ressourcepacks/js-green-ores",
+                  slug: "projects/resourcepacks/js-green-ores",
                 },
                 {
                   label: "Installation",
-                  slug: "projects/ressourcepacks/js-green-ores/installation",
+                  slug: "projects/resourcepacks/js-green-ores/installation",
                 },
               ],
             },
@@ -129,11 +129,11 @@ export default defineConfig({
               items: [
                 {
                   label: "Overview",
-                  slug: "projects/ressourcepacks/js-cyan-ores",
+                  slug: "projects/resourcepacks/js-cyan-ores",
                 },
                 {
                   label: "Installation",
-                  slug: "projects/ressourcepacks/js-cyan-ores/installation",
+                  slug: "projects/resourcepacks/js-cyan-ores/installation",
                 },
               ],
             },
@@ -143,11 +143,11 @@ export default defineConfig({
               items: [
                 {
                   label: "Overview",
-                  slug: "projects/ressourcepacks/js-removed-crosshair",
+                  slug: "projects/resourcepacks/js-removed-crosshair",
                 },
                 {
                   label: "Installation",
-                  slug: "projects/ressourcepacks/js-removed-crosshair/installation",
+                  slug: "projects/resourcepacks/js-removed-crosshair/installation",
                 },
               ],
             },
