@@ -1,49 +1,65 @@
-# Starlight Starter Kit: Basics
+# gaming-site
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+The gaming documentation site for [henrymeyer.de](https://henrymeyer.de), built with [Astro](https://astro.build) and [Starlight](https://starlight.astro.build).
+The site documents HenryMM gaming projects, including Minecraft modpacks and resource packs. It is available at [gaming.henrymeyer.de](https://gaming.henrymeyer.de).
 
-```
-pnpm create astro@latest -- --template starlight
-```
+## Tech stack
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Astro](https://astro.build) with static output
+- [Starlight](https://starlight.astro.build) for documentation navigation and search
+- Markdown and [MDX](https://mdxjs.com) content
 
-## 🚀 Project Structure
+## Getting started
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+From the repository root:
 
-```
-.
-├── public/
-├── src/
-│   ├── assets/
-│   ├── content/
-│   │   └── docs/
-│   └── content.config.ts
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+```bash
+# Install dependencies
+pnpm install
+
+# Start the development server
+pnpm dev:gaming-site
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Or from within this directory:
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```bash
+pnpm dev
+```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+Open [http://localhost:4321](http://localhost:4321) in your browser.
 
-## 🧞 Commands
+## Scripts
 
-All commands are run from the root of the project, from a terminal:
+| Command        | Description                          |
+| -------------- | ------------------------------------ |
+| `pnpm dev`     | Start the development server         |
+| `pnpm build`   | Create a production build in `dist/` |
+| `pnpm preview` | Serve the production build locally   |
+| `pnpm start`   | Start the development server         |
+| `pnpm astro`   | Run the Astro CLI                    |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
+From the repository root, use `pnpm build:gaming-site` to build this workspace.
 
-## 👀 Want to learn more?
+## Content
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+Documentation pages live in `src/content/docs/` as `.md` or `.mdx` files. Site metadata, custom components, and the Starlight sidebar are configured in `astro.config.mjs`.
+See [contributing.md](./contributing.md) for content guidelines, navigation instructions, validation steps, and pull request expectations.
+
+## Environment variables
+
+This application currently does not require environment variables. Do not commit secrets or local environment files.
+
+## Deployment
+
+Astro generates a static site in `dist/` with `pnpm build`. The production site is configured with the canonical URL [https://gaming.henrymeyer.de](https://gaming.henrymeyer.de). Deployment provider configuration is managed outside this application directory.
+
+## License
+
+Refer to the repository and package licensing information before reusing code or content. This application does not currently include a local `LICENSE` file.
+
+## Learn more
+
+- [Astro documentation](https://docs.astro.build)
+- [Starlight documentation](https://starlight.astro.build/)
+- [Astro Discord](https://astro.build/chat)
