@@ -7,6 +7,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "HenryMM Gaming",
+      favicon: "/favicon.ico",
+      components: {
+        PageTitle: "./src/components/PageTitle.astro",
+      },
       social: [
         {
           icon: "github",
