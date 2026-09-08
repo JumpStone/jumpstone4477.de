@@ -32,37 +32,37 @@
     },
     {
       "source": "/js-green-diamond-ore",
-      "destination": "/projects/modpacks/js-green-ores/",
+      "destination": "/projects/resourcepacks/js-green-ores/",
       "permanent": true
     },
     {
       "source": "/js-green-ancient-debris-ore",
-      "destination": "/projects/modpacks/js-green-ores/",
+      "destination": "/projects/resourcepacks/js-green-ores/",
       "permanent": true
     },
     {
       "source": "/js-green-redstone-ore",
-      "destination": "/projects/modpacks/js-green-ores/",
+      "destination": "/projects/resourcepacks/js-green-ores/",
       "permanent": true
     },
     {
       "source": "/js-green-iron-ore",
-      "destination": "/projects/modpacks/js-green-ores/",
+      "destination": "/projects/resourcepacks/js-green-ores/",
       "permanent": true
     },
     {
       "source": "/js-cyan-diamond-ore",
-      "destination": "/projects/modpacks/js-cyan-ores/",
+      "destination": "/projects/resourcepacks/js-cyan-ores/",
       "permanent": true
     },
     {
       "source": "/js-cyan-ores",
-      "destination": "/projects/modpacks/js-cyan-ores/",
+      "destination": "/projects/resourcepacks/js-cyan-ores/",
       "permanent": true
     },
     {
       "source": "/js-removed-crosshair",
-      "destination": "/projects/modpacks/js-removed-crosshair/",
+      "destination": "/projects/resourcepacks/js-removed-crosshair/",
       "permanent": true
     }
   ]
