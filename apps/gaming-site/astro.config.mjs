@@ -90,7 +90,7 @@ export default defineConfig({
               ],
             },
             {
-              label: "HMT pack",
+              label: "HMT Pack",
               collapsed: true,
               items: [
                 {
