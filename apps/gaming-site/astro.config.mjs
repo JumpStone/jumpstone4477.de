@@ -51,6 +51,10 @@ export default defineConfig({
                   label: "Installation",
                   slug: "projects/modpacks/hm-basic-play/installation",
                 },
+                {
+                  label: "Included Projects",
+                  slug: "projects/modpacks/hm-basic-play/included-projects",
+                },
               ],
             },
             {

@@ -3,7 +3,7 @@ title: HM Basic Play
 description: A lightweight, small optimized daily driver modpack. For everyone and daily use.
 ---
 
-import { LinkCard } from "@astrojs/starlight/components";
+import { LinkCard, CardGrid } from "@astrojs/starlight/components";
 
 This modpack aims to improve the Vanilla Minecraft experience through small optimizations and tweaks.
 
@@ -20,7 +20,13 @@ It was developed to be compatible with the rules of most common servers. However
 
 ---
 
-<LinkCard
-  title="Installation"
-  href="/projects/modpacks/hm-basic-play/installation/"
-/>
+<CardGrid>
+  <LinkCard
+    title="Installation"
+    href="/projects/modpacks/hm-basic-play/installation/"
+  />
+  <LinkCard
+    title="Included Projects"
+    href="/projects/modpacks/hm-basic-play/included-projects/"
+  />
+</CardGrid>
