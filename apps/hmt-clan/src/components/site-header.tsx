@@ -80,12 +80,13 @@ export default function SiteHeader({
             className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-4 whitespace-nowrap"
           >
             <Link
-              href="/crew"
+              href="/pack"
+              target="_blank"
               className={`text-foreground/80 transition-all duration-300 hover:text-foreground focus-visible:outline-none focus-visible:underline ${
                 isCompact ? "text-sm" : "text-base"
               }`}
             >
-              Crew
+              Modpack
             </Link>
             <Link
               href="/events"

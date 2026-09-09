@@ -18,6 +18,15 @@ export default function SiteFooter() {
                 </a>
               </li>
               <li>
+                <a
+                  className="underline underline-offset-2"
+                  target="_blank"
+                  href="/pack"
+                >
+                  Modpack
+                </a>
+              </li>
+              <li>
                 <a className="underline underline-offset-2" href="/events">
                   Events
                 </a>
