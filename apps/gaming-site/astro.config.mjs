@@ -183,10 +183,6 @@ export default defineConfig({
           label: "Contribute",
           slug: "contribute",
         },
-        {
-          label: "Server Configuration & Setup",
-          slug: "server-setup",
-        },
       ],
     }),
   ],
