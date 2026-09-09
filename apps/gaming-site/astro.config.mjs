@@ -87,6 +87,10 @@ export default defineConfig({
                   label: "Installation",
                   slug: "projects/modpacks/hm-lifep/installation",
                 },
+                {
+                  label: "Included Projects",
+                  slug: "projects/modpacks/hm-lifep/included-projects",
+                },
               ],
             },
             {
