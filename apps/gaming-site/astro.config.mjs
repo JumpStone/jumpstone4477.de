@@ -123,6 +123,10 @@ export default defineConfig({
                   label: "Installation",
                   slug: "projects/modpacks/hmt-pack/installation",
                 },
+                {
+                  label: "Included Projects",
+                  slug: "projects/modpacks/hmt-pack/included-projects",
+                },
               ],
             },
           ],
